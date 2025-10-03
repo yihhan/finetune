@@ -248,7 +248,7 @@ class ModelEvaluator:
             rag_time=rag_time,
         )
     
-    def load_test_dataset(self, dataset_path: str = "processed_data/financial_regulation_qa.json") -> List[Dict]:
+    def load_test_dataset(self, dataset_path: str = "processed_data/enhanced_financial_regulation_qa.json") -> List[Dict]:
         """Load test dataset for evaluation"""
         with open(dataset_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
@@ -388,7 +388,7 @@ def main():
     # Initialize evaluator
     evaluator = ModelEvaluator(
         base_model_path="microsoft/DialoGPT-medium",
-        finetuned_model_path="finetuned_financial_model",
+        finetuned_model_path="improved_finetuned_financial_model",
         openai_api_key=None  # Set your OpenAI API key here if available
     )
     
