@@ -160,7 +160,7 @@ class FixedFinancialRegulationTrainer:
         )
     
     def tokenize_function(self, examples):
-        """Improved tokenization with simpler format"""
+        """Fixed tokenization with proper padding and truncation"""
         texts = []
         for i in range(len(examples['instruction'])):
             instruction = examples['instruction'][i]
@@ -171,17 +171,17 @@ class FixedFinancialRegulationTrainer:
             prompt = f"Question: {input_text}\nAnswer: {output_text}{self.tokenizer.eos_token}"
             texts.append(prompt)
         
-        # Tokenize with shorter max length
+        # Tokenize with consistent padding and truncation
         tokenized = self.tokenizer(
             texts,
             truncation=True,
-            padding=False,
+            padding="max_length",  # Ensure consistent length
             max_length=self.data_args.max_seq_length,
             return_tensors=None,
         )
         
-        # Set labels
-        tokenized["labels"] = tokenized["input_ids"].copy()
+        # Set labels (copy input_ids)
+        tokenized["labels"] = [ids.copy() for ids in tokenized["input_ids"]]
         
         return tokenized
     
@@ -189,10 +189,11 @@ class FixedFinancialRegulationTrainer:
         """Train with conservative parameters"""
         logger.info("Starting conservative training...")
         
-        # Data collator
+        # Data collator with proper padding
         data_collator = DataCollatorForLanguageModeling(
             tokenizer=self.tokenizer,
             mlm=False,
+            pad_to_multiple_of=8,  # Efficient padding
         )
         
         # Initialize trainer
