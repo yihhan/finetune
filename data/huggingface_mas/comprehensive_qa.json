@@ -1,0 +1,42 @@
+[
+  {
+    "question": "What is the role of MAS in Singapore's financial system?",
+    "answer": "MAS is Singapore's central bank and integrated financial regulator responsible for monetary policy, financial supervision, and financial market development."
+  },
+  {
+    "question": "What are MAS's main regulatory functions?",
+    "answer": "MAS regulates banks, insurers, capital markets intermediaries, and payment service providers to ensure financial stability and consumer protection."
+  },
+  {
+    "question": "What is the purpose of MAS Notice 626?",
+    "answer": "MAS Notice 626 establishes requirements for prevention of money laundering and countering the financing of terrorism for financial institutions."
+  },
+  {
+    "question": "What are the capital adequacy requirements for Singapore banks?",
+    "answer": "Singapore banks must maintain minimum capital ratios: 6.5% CET1, 8% Tier 1, and 10% Total capital ratios under Basel III standards."
+  },
+  {
+    "question": "How does MAS regulate fintech companies?",
+    "answer": "MAS regulates fintech companies through licensing requirements, sandbox programs, and technology risk management guidelines to promote innovation while ensuring financial stability."
+  },
+  {
+    "question": "What is MAS's approach to digital banking?",
+    "answer": "MAS supports digital banking through digital bank licenses, technology risk management guidelines, and cybersecurity requirements to enable innovation while maintaining security."
+  },
+  {
+    "question": "What are the requirements for payment service providers?",
+    "answer": "Payment service providers must obtain appropriate licenses, meet capital requirements, implement AML/CFT measures, and comply with data protection requirements."
+  },
+  {
+    "question": "How does MAS ensure financial stability?",
+    "answer": "MAS ensures financial stability through prudential regulation, macroprudential policies, stress testing, and crisis management frameworks."
+  },
+  {
+    "question": "What is MAS's position on cryptocurrency?",
+    "answer": "MAS regulates cryptocurrency activities through the Payment Services Act, requiring licensing for digital payment token services and implementing risk management requirements."
+  },
+  {
+    "question": "What are the reporting requirements for financial institutions?",
+    "answer": "Financial institutions must submit regular reports on capital adequacy, liquidity, risk exposures, and compliance status to MAS as specified in relevant notices."
+  }
+]

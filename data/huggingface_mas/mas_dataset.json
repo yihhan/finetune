@@ -1,0 +1,77 @@
+{
+  "description": "Monetary Authority of Singapore regulatory documents and guidelines",
+  "source": "https://huggingface.co/datasets/gtfintechlab/monetary_authority_of_singapore",
+  "download_date": "2025-10-03 09:46:44",
+  "documents": [
+    {
+      "title": "MAS Act",
+      "content": "The Monetary Authority of Singapore Act establishes MAS as Singapore's central bank and integrated financial regulator.",
+      "qa_pairs": [
+        {
+          "question": "What is the Monetary Authority of Singapore Act?",
+          "answer": "The MAS Act establishes MAS as Singapore's central bank and integrated financial regulator with powers to regulate and supervise financial institutions."
+        },
+        {
+          "question": "What are MAS's main functions?",
+          "answer": "MAS's main functions include monetary policy, financial supervision, financial market development, and currency issuance."
+        }
+      ]
+    },
+    {
+      "title": "Banking Act",
+      "content": "The Banking Act regulates banking business in Singapore and establishes prudential requirements for banks.",
+      "qa_pairs": [
+        {
+          "question": "What does the Banking Act regulate?",
+          "answer": "The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight."
+        },
+        {
+          "question": "What are the key requirements under the Banking Act?",
+          "answer": "Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS."
+        }
+      ]
+    },
+    {
+      "title": "Securities and Futures Act",
+      "content": "The Securities and Futures Act regulates capital markets activities including securities trading and fund management.",
+      "qa_pairs": [
+        {
+          "question": "What does the Securities and Futures Act cover?",
+          "answer": "The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements."
+        },
+        {
+          "question": "Who must be licensed under the Securities and Futures Act?",
+          "answer": "Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS."
+        }
+      ]
+    },
+    {
+      "title": "Insurance Act",
+      "content": "The Insurance Act regulates insurance business in Singapore and establishes prudential requirements for insurers.",
+      "qa_pairs": [
+        {
+          "question": "What does the Insurance Act regulate?",
+          "answer": "The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection."
+        },
+        {
+          "question": "What are the capital requirements for insurers?",
+          "answer": "Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS."
+        }
+      ]
+    },
+    {
+      "title": "Payment Services Act",
+      "content": "The Payment Services Act regulates digital payment services and money-changing services in Singapore.",
+      "qa_pairs": [
+        {
+          "question": "What does the Payment Services Act regulate?",
+          "answer": "The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore."
+        },
+        {
+          "question": "What licenses are required for payment services?",
+          "answer": "Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes."
+        }
+      ]
+    }
+  ]
+}

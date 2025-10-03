@@ -1,0 +1,16 @@
+{
+  "total_files": 7,
+  "files_by_category": {
+    "mas_guidelines": 4,
+    "regulations": 3,
+    "notices": 0
+  },
+  "download_date": "2025-10-03 09:40:14",
+  "sources": [
+    "MAS Guidelines and Notices",
+    "Payment Services Act",
+    "Personal Data Protection Act",
+    "Cybersecurity Requirements",
+    "Hugging Face MAS Dataset"
+  ]
+}

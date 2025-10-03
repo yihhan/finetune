@@ -1,0 +1,24 @@
+# Cybersecurity Requirements for Financial Institutions
+
+## Overview
+MAS requires robust cybersecurity frameworks for all financial institutions.
+
+## Key Requirements
+
+Q: What cybersecurity framework should be implemented?
+A: Institutions should implement a comprehensive cybersecurity framework including risk assessment, controls, and incident response.
+
+Q: What are the key security controls?
+A: Multi-layered security controls including firewalls, encryption, access controls, and monitoring systems.
+
+Q: How often should penetration testing be conducted?
+A: Regular penetration testing should be conducted at least annually or after significant system changes.
+
+Q: What incident response procedures are required?
+A: Institutions must have documented incident response procedures and report cybersecurity incidents to MAS.
+
+Q: What staff training is required?
+A: Regular cybersecurity training must be provided to all staff, with specialized training for IT personnel.
+
+Q: What insurance requirements apply?
+A: Institutions should maintain appropriate cybersecurity insurance coverage.

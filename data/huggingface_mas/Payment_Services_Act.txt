@@ -1,0 +1,13 @@
+# Payment Services Act
+
+## Overview
+The Payment Services Act regulates digital payment services and money-changing services in Singapore.
+
+## Questions and Answers
+
+Q: What does the Payment Services Act regulate?
+A: The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore.
+
+Q: What licenses are required for payment services?
+A: Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes.
+

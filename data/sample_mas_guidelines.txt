@@ -1,0 +1,30 @@
+MAS Guidelines on AI in Financial Advisory Services
+
+Question: What is MAS's position on the use of artificial intelligence in financial advisory services?
+
+Answer: MAS supports the responsible use of AI in financial advisory services while ensuring adequate safeguards. Financial institutions must ensure that AI systems used in advisory services are fair, transparent, and accountable. They should have robust governance frameworks, regular model validation, and human oversight mechanisms. MAS expects institutions to clearly disclose the use of AI to customers and ensure that AI-driven recommendations are explainable and aligned with customers' best interests.
+
+Key Requirements:
+1. Governance Framework: Institutions must establish clear governance structures for AI systems
+2. Model Validation: Regular testing and validation of AI models for accuracy and bias
+3. Human Oversight: Maintain human oversight and intervention capabilities
+4. Customer Disclosure: Clear communication to customers about AI usage
+5. Explainability: AI recommendations must be explainable to customers and regulators
+
+Question: What are the reporting requirements for AI systems in financial advisory?
+
+Answer: Financial institutions using AI in advisory services must report to MAS on:
+- AI system performance and accuracy metrics
+- Customer complaints related to AI recommendations
+- Model updates and changes
+- Risk assessments and mitigation measures
+- Compliance with MAS guidelines on AI usage
+
+Question: How should institutions handle AI model bias and fairness?
+
+Answer: Institutions must implement measures to detect, monitor, and mitigate bias in AI systems. This includes:
+- Regular bias testing across different customer segments
+- Diverse training data and representative model development
+- Ongoing monitoring of AI decisions for discriminatory outcomes
+- Clear procedures for addressing bias-related issues
+- Documentation of bias mitigation strategies

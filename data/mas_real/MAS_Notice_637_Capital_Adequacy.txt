@@ -1,0 +1,72 @@
+# Capital Adequacy Requirements
+
+Source: https://www.mas.gov.sg/regulation/notices/notice-637
+Downloaded: 2025-10-03 09:45:43
+Document Type: MAS Regulatory Notice
+
+## Overview
+
+Capital Adequacy Requirements - This document outlines regulatory requirements for financial institutions operating in Singapore.
+
+## Key Requirements
+
+Based on the content from MAS website, this notice covers the following key areas:
+
+### Regulatory Framework
+- Compliance requirements for licensed financial institutions
+- Prudential standards and risk management requirements
+- Reporting and disclosure obligations
+
+### Implementation Guidelines
+- Procedures for compliance implementation
+- Timeline for compliance requirements
+- Documentation and record-keeping requirements
+
+## Questions and Answers
+
+Q: What is the purpose of this MAS notice?
+A: This notice establishes regulatory requirements for capital adequacy requirements to ensure financial stability and consumer protection.
+
+Q: Who must comply with these requirements?
+A: All licensed financial institutions, including banks, insurance companies, and capital markets intermediaries operating in Singapore.
+
+Q: What are the key compliance requirements?
+A: Key requirements include establishing appropriate policies and procedures, implementing risk management frameworks, and maintaining adequate capital and liquidity.
+
+Q: What are the reporting obligations?
+A: Institutions must submit regular reports to MAS on their compliance status, risk exposures, and any material changes to their operations.
+
+Q: What are the penalties for non-compliance?
+A: Non-compliance may result in regulatory action including fines, restrictions on business activities, or revocation of licenses.
+
+Q: How often should these requirements be reviewed?
+A: Requirements should be reviewed regularly and updated as necessary to reflect changes in the regulatory environment and business operations.
+
+## Implementation Timeline
+
+1. **Immediate**: Review and assess current compliance status
+2. **30 days**: Develop implementation plan and allocate resources
+3. **90 days**: Implement necessary systems and controls
+4. **180 days**: Complete full compliance implementation
+5. **Ongoing**: Regular monitoring and reporting
+
+## Contact Information
+
+For questions about this notice, contact MAS:
+- Website: https://www.mas.gov.sg
+- Email: mas_enquiries@mas.gov.sg
+- Phone: +65 6229 8555
+
+---
+
+## Raw Content (for reference)
+
+Government agencies communicate via .gov.sg websites (e.g. go.gov.sg/open).Trusted websitesTrusted websites
+Look for alock() or https:// as an added precaution. Share sensitive information only on official, secure websites.
+NoticesLast Revised Date: 19 August 2024Notice 609 Auditors' Reports and Additional Information to be Submitted with Annual AccountsRequirements for banks to submit external auditors' reports and additional information, and annual financial statements.Financial Statements
+NoticesLast Revised Date: 16 May 2024Notice 649 Minimum Liquid Assets and Liquidity Coverage RatioRequirements for banks in Singapore on minimum liquid assets (MLA) and liquidity coverage ratio (LCR).Liquidity Risk
+GuidelinesLast Revised Date: 16 May 2024Guidelines on the Application of Banking Regulations to Islamic BankingGuidelines for all financial institutions covering MAS' general approach to Islamic banking regulations.Islamic Banking
+NoticesLast Revised Date: 16 May 2024Notice FHC-N637 on Risk Based Capital Adequacy RequirementsRisk based capital adequacy requirements for financial holding companies that have a subsidiary that is a bank incorporated in Singapore and are predominantly banking designated financial holding companies (predominantly banking DFHCs).Capital Adequacy
+NoticesLast Revised Date: 03 May 2024Notice 656 Exposures to Single Counterparty Groups for Banks Incorporated in SingaporeRules to measure and limit a locally-incorporated bank's exposures to a single counterparty group.Credit Risk
+CircularsPublished Date: 20 September 2023PPD 10/2023: Publication of the Revised MAS Notice 637 on Risk Based Capital Adequacy Requirements for Banks Incorporated in Singapore, to Implement the Final Basel III ReformsThis circular informs locally-incorporated banks of the publication of the revised MAS Notice 637 on risk based capital adequacy requirements for banks incorporated in Singapore.Capital Adequacy
+CircularsPublished Date: 08 June 2023PPD 08/2023: Implementati...

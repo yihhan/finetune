@@ -1,0 +1,18 @@
+{
+  "download_date": "2025-10-03 09:45:58",
+  "total_documents": 8,
+  "documents": [
+    "MAS_Guidelines_AI_Advisory.txt",
+    "MAS_Guidelines_Cybersecurity.txt",
+    "MAS_Guidelines_PDPA.txt",
+    "MAS_Guidelines_Technology_Risk.txt",
+    "MAS_Notice_1015_Reporting.txt",
+    "MAS_Notice_626_AML_CFT.txt",
+    "MAS_Notice_637_Capital_Adequacy.txt",
+    "MAS_Notice_832_Risk_Management.txt"
+  ],
+  "categories": {
+    "notices": 4,
+    "guidelines": 4
+  }
+}

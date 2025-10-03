@@ -1,0 +1,33 @@
+# Personal Data Protection Act Guidelines
+
+Source: https://www.mas.gov.sg/publications/guidelines/personal-data-protection-act-guidelines
+Downloaded: 2025-10-03 09:45:56
+Document Type: MAS Guidelines
+
+## Overview
+
+Personal Data Protection Act Guidelines - These guidelines provide best practices for financial institutions.
+
+## Key Principles
+
+Q: What is the scope of these guidelines?
+A: These guidelines cover personal data protection act guidelines for all MAS-licensed institutions.
+
+Q: Are these guidelines mandatory?
+A: While not legally binding, MAS expects compliance with these principles.
+
+Q: How should institutions implement these guidelines?
+A: Develop policies and procedures that align with the guidelines.
+
+Q: What documentation is required?
+A: Maintain documentation of policies, procedures, and compliance activities.
+
+## Best Practices
+
+1. Conduct regular risk assessments
+2. Maintain strong governance
+3. Implement monitoring systems
+4. Provide staff training
+5. Establish reporting procedures
+
+For more information, visit: https://www.mas.gov.sg/publications/guidelines/personal-data-protection-act-guidelines

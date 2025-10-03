@@ -1,0 +1,13 @@
+# Securities and Futures Act
+
+## Overview
+The Securities and Futures Act regulates capital markets activities including securities trading and fund management.
+
+## Questions and Answers
+
+Q: What does the Securities and Futures Act cover?
+A: The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements.
+
+Q: Who must be licensed under the Securities and Futures Act?
+A: Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS.
+

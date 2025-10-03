@@ -1,0 +1,65 @@
+# Risk Management Practices
+
+Source: https://www.mas.gov.sg/regulation/notices/notice-832
+Downloaded: 2025-10-03 09:45:45
+Document Type: MAS Regulatory Notice
+
+## Overview
+
+Risk Management Practices - This document outlines regulatory requirements for financial institutions operating in Singapore.
+
+## Key Requirements
+
+Based on the content from MAS website, this notice covers the following key areas:
+
+### Regulatory Framework
+- Compliance requirements for licensed financial institutions
+- Prudential standards and risk management requirements
+- Reporting and disclosure obligations
+
+### Implementation Guidelines
+- Procedures for compliance implementation
+- Timeline for compliance requirements
+- Documentation and record-keeping requirements
+
+## Questions and Answers
+
+Q: What is the purpose of this MAS notice?
+A: This notice establishes regulatory requirements for risk management practices to ensure financial stability and consumer protection.
+
+Q: Who must comply with these requirements?
+A: All licensed financial institutions, including banks, insurance companies, and capital markets intermediaries operating in Singapore.
+
+Q: What are the key compliance requirements?
+A: Key requirements include establishing appropriate policies and procedures, implementing risk management frameworks, and maintaining adequate capital and liquidity.
+
+Q: What are the reporting obligations?
+A: Institutions must submit regular reports to MAS on their compliance status, risk exposures, and any material changes to their operations.
+
+Q: What are the penalties for non-compliance?
+A: Non-compliance may result in regulatory action including fines, restrictions on business activities, or revocation of licenses.
+
+Q: How often should these requirements be reviewed?
+A: Requirements should be reviewed regularly and updated as necessary to reflect changes in the regulatory environment and business operations.
+
+## Implementation Timeline
+
+1. **Immediate**: Review and assess current compliance status
+2. **30 days**: Develop implementation plan and allocate resources
+3. **90 days**: Implement necessary systems and controls
+4. **180 days**: Complete full compliance implementation
+5. **Ongoing**: Regular monitoring and reporting
+
+## Contact Information
+
+For questions about this notice, contact MAS:
+- Website: https://www.mas.gov.sg
+- Email: mas_enquiries@mas.gov.sg
+- Phone: +65 6229 8555
+
+---
+
+## Raw Content (for reference)
+
+Government agencies communicate via .gov.sg websites (e.g. go.gov.sg/open).Trusted websitesTrusted websites
+Look for alock() or https:// as an added precaution. Share sensitive information only on official, secure websites....

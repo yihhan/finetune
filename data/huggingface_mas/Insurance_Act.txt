@@ -1,0 +1,13 @@
+# Insurance Act
+
+## Overview
+The Insurance Act regulates insurance business in Singapore and establishes prudential requirements for insurers.
+
+## Questions and Answers
+
+Q: What does the Insurance Act regulate?
+A: The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection.
+
+Q: What are the capital requirements for insurers?
+A: Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS.
+

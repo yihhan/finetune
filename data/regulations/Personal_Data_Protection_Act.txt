@@ -1,0 +1,24 @@
+# Personal Data Protection Act (PDPA) Guidelines for Financial Institutions
+
+## Overview
+Financial institutions must comply with PDPA when handling personal data.
+
+## Key Requirements
+
+Q: What consent is required for data collection?
+A: Financial institutions must obtain clear and informed consent before collecting personal data.
+
+Q: How should data be used?
+A: Data should only be used for the purposes specified at the time of collection.
+
+Q: What security measures are required?
+A: Institutions must implement appropriate technical and organizational measures to protect personal data.
+
+Q: What are the data breach notification requirements?
+A: Data breaches must be reported to the Personal Data Protection Commission within 72 hours.
+
+Q: How long can data be retained?
+A: Data should only be retained as long as necessary for business or legal purposes.
+
+Q: What are individuals' rights?
+A: Individuals have the right to access, correct, and withdraw consent for their personal data.

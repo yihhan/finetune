@@ -1,0 +1,18 @@
+# Hugging Face MAS Dataset Sample
+
+This is a placeholder for data that would be downloaded from:
+https://huggingface.co/datasets/gtfintechlab/monetary_authority_of_singapore
+
+## Sample Q&A from the dataset:
+
+Q: What is the role of MAS in Singapore's financial system?
+A: MAS is Singapore's central bank and integrated financial regulator.
+
+Q: What are MAS's main functions?
+A: MAS's main functions include monetary policy, financial supervision, and financial market development.
+
+Q: How does MAS regulate banks?
+A: MAS regulates banks through prudential requirements, licensing, and ongoing supervision.
+
+Q: What is MAS's approach to fintech?
+A: MAS adopts a balanced approach to fintech, promoting innovation while ensuring financial stability.

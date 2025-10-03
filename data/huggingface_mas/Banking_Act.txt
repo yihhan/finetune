@@ -1,0 +1,13 @@
+# Banking Act
+
+## Overview
+The Banking Act regulates banking business in Singapore and establishes prudential requirements for banks.
+
+## Questions and Answers
+
+Q: What does the Banking Act regulate?
+A: The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight.
+
+Q: What are the key requirements under the Banking Act?
+A: Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS.
+

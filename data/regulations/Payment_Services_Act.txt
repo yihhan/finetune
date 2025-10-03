@@ -1,0 +1,21 @@
+# Payment Services Act 2019
+
+## Overview
+The Payment Services Act regulates digital payment services in Singapore.
+
+## Key Requirements
+
+Q: What licenses are required for payment services?
+A: Providers need money-changing, standard payment institution, or major payment institution licenses based on transaction volumes.
+
+Q: What are the capital requirements?
+A: Capital requirements vary by license type, ranging from SGD 100,000 to SGD 1 million.
+
+Q: How should customer funds be handled?
+A: Customer funds must be kept separate from the provider's own funds in designated accounts.
+
+Q: What are the reporting obligations?
+A: Licensed entities must submit regular reports to MAS on transaction volumes, compliance status, and risk management.
+
+Q: What AML/CFT requirements apply?
+A: All payment service providers must comply with AML/CFT requirements including customer due diligence and suspicious transaction reporting.
