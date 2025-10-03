@@ -268,7 +268,7 @@ def create_flan_t5_training_arguments(
         dataloader_pin_memory=False,
         fp16=torch.cuda.is_available(),
         save_safetensors=True,
-        predict_with_generate=True,  # Important for Seq2Seq
+        # predict_with_generate=True,  # Not available in all versions
     )
 
 def main():
