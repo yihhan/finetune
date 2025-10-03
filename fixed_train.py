@@ -230,10 +230,10 @@ def create_fixed_training_arguments(
     num_train_epochs: int = 2,  # Fewer epochs
     per_device_train_batch_size: int = 4,
     learning_rate: float = 5e-6,  # Much lower learning rate
-    warmup_steps: int = 20,  # Fewer warmup steps
+    warmup_steps: int = 10,  # Fewer warmup steps
     logging_steps: int = 5,
-    eval_steps: int = 20,
-    save_steps: int = 50,
+    eval_steps: int = 10,  # Aligned with save_steps
+    save_steps: int = 10,  # Must be multiple of eval_steps
 ) -> TrainingArguments:
     """Create conservative training arguments"""
     
