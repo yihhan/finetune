@@ -1,0 +1,255 @@
+"""
+Improved Dataset Preparation for Financial Regulation LLM
+
+This script creates a much larger and better-structured dataset for fine-tuning.
+"""
+
+import json
+import os
+from pathlib import Path
+from typing import List, Dict
+import pandas as pd
+
+class ImprovedFinancialDatasetPrep:
+    """Enhanced dataset preparation with more comprehensive Q&A pairs"""
+    
+    def __init__(self, output_dir: str = "processed_data"):
+        self.output_dir = Path(output_dir)
+        self.output_dir.mkdir(exist_ok=True)
+    
+    def create_comprehensive_dataset(self) -> List[Dict]:
+        """Create a comprehensive dataset with many more Q&A pairs"""
+        
+        comprehensive_qa = [
+            # MAS AI Guidelines
+            {
+                "question": "What is MAS's position on the use of artificial intelligence in financial advisory services?",
+                "answer": "MAS supports the responsible use of AI in financial advisory services while ensuring adequate safeguards. Financial institutions must ensure that AI systems used in advisory services are fair, transparent, and accountable. They should have robust governance frameworks, regular model validation, and human oversight mechanisms. MAS expects institutions to clearly disclose the use of AI to customers and ensure that AI-driven recommendations are explainable and aligned with customers' best interests.",
+                "source": "MAS Guidelines on AI in Financial Advisory",
+                "category": "ai_advisory"
+            },
+            {
+                "question": "How should financial institutions implement AI governance frameworks?",
+                "answer": "Financial institutions should implement comprehensive AI governance frameworks that include: (1) Board and senior management oversight of AI systems, (2) Clear policies and procedures for AI development and deployment, (3) Regular risk assessments and model validation, (4) Human oversight and intervention capabilities, (5) Customer disclosure and consent mechanisms, (6) Ongoing monitoring and audit trails, and (7) Staff training and competency requirements.",
+                "source": "MAS Guidelines on AI Governance",
+                "category": "ai_advisory"
+            },
+            {
+                "question": "What are the requirements for AI model validation in financial services?",
+                "answer": "AI model validation requirements include: regular testing for accuracy and bias, validation of model assumptions and limitations, stress testing under different scenarios, ongoing monitoring of model performance, documentation of model development and validation processes, independent review by qualified personnel, and regular updates and retraining as necessary.",
+                "source": "MAS AI Model Validation Guidelines",
+                "category": "ai_advisory"
+            },
+            
+            # Capital Adequacy Requirements
+            {
+                "question": "What are the capital adequacy requirements for banks in Singapore?",
+                "answer": "Singapore banks are required to maintain a minimum Common Equity Tier 1 (CET1) capital ratio of 6.5%, Tier 1 capital ratio of 8%, and Total capital ratio of 10%. These requirements are based on Basel III standards. MAS also requires banks to maintain a capital conservation buffer of 2.5% and a countercyclical capital buffer that can range from 0% to 2.5% depending on economic conditions. Banks must also meet leverage ratio requirements and undergo regular stress testing.",
+                "source": "MAS Notice 637 - Capital Adequacy Requirements",
+                "category": "capital_requirements"
+            },
+            {
+                "question": "How do banks calculate their capital adequacy ratios?",
+                "answer": "Banks calculate capital adequacy ratios by dividing their regulatory capital by their risk-weighted assets. Common Equity Tier 1 (CET1) capital includes common shares, retained earnings, and other qualifying instruments. Tier 1 capital adds additional Tier 1 instruments. Total capital includes Tier 1 plus Tier 2 capital instruments. Risk-weighted assets are calculated by applying risk weights to different asset categories based on their credit risk, market risk, and operational risk profiles.",
+                "source": "MAS Capital Calculation Guidelines",
+                "category": "capital_requirements"
+            },
+            {
+                "question": "What happens if a bank fails to meet capital adequacy requirements?",
+                "answer": "If a bank fails to meet capital adequacy requirements, MAS may take various regulatory actions including: requiring the bank to submit a capital restoration plan, imposing restrictions on dividend payments and executive compensation, requiring additional capital injections, imposing operational restrictions, and in severe cases, placing the bank under conservatorship or receivership. Banks must also report any breaches immediately to MAS and take immediate corrective action.",
+                "source": "MAS Enforcement Guidelines",
+                "category": "capital_requirements"
+            },
+            
+            # Anti-Money Laundering
+            {
+                "question": "How should financial institutions implement anti-money laundering measures?",
+                "answer": "Financial institutions must implement comprehensive AML measures including customer due diligence (CDD), ongoing monitoring, and suspicious transaction reporting. They should conduct enhanced due diligence for high-risk customers and politically exposed persons (PEPs). Institutions must maintain transaction records for at least 5 years and implement risk-based AML programs that are regularly reviewed and updated. They should also provide regular AML training to staff and appoint a designated AML officer.",
+                "source": "MAS Notice 626 - Prevention of Money Laundering and Countering the Financing of Terrorism",
+                "category": "anti_money_laundering"
+            },
+            {
+                "question": "What is customer due diligence in AML context?",
+                "answer": "Customer due diligence (CDD) in AML context involves: (1) Identifying and verifying the identity of customers and beneficial owners, (2) Understanding the nature and purpose of the business relationship, (3) Conducting ongoing monitoring of the business relationship, (4) Maintaining up-to-date customer information, and (5) Applying enhanced due diligence for high-risk customers, politically exposed persons (PEPs), and complex or unusual transactions. CDD must be conducted before establishing business relationships and throughout the relationship.",
+                "source": "MAS CDD Guidelines",
+                "category": "anti_money_laundering"
+            },
+            {
+                "question": "When must financial institutions file suspicious transaction reports?",
+                "answer": "Financial institutions must file suspicious transaction reports (STRs) with MAS when they have reasonable grounds to suspect that transactions are related to money laundering, terrorism financing, or other criminal activities. STRs must be filed within 15 days of the suspicion arising. Institutions must not tip off customers about the filing of STRs and must continue to conduct business normally while investigations are ongoing. All STR-related information must be kept confidential.",
+                "source": "MAS STR Filing Requirements",
+                "category": "anti_money_laundering"
+            },
+            
+            # Data Protection
+            {
+                "question": "What are the data protection requirements for financial institutions under the PDPA?",
+                "answer": "Financial institutions must comply with the Personal Data Protection Act (PDPA) which requires obtaining consent before collecting personal data, using data only for specified purposes, and implementing appropriate security measures. They must allow individuals to access and correct their personal data, and provide withdrawal of consent mechanisms. Institutions must also implement data breach notification procedures and appoint a Data Protection Officer. Data should be retained only as long as necessary for business or legal purposes.",
+                "source": "PDPA Guidelines for Financial Institutions",
+                "category": "data_protection"
+            },
+            {
+                "question": "How should financial institutions handle data breaches?",
+                "answer": "Financial institutions should handle data breaches by: (1) Immediately assessing the scope and impact of the breach, (2) Containing the breach and preventing further unauthorized access, (3) Notifying the Personal Data Protection Commission within 72 hours if the breach is likely to result in significant harm, (4) Notifying affected individuals without undue delay, (5) Documenting all breach response activities, (6) Conducting a post-incident review to prevent future breaches, and (7) Implementing additional security measures as necessary.",
+                "source": "MAS Data Breach Response Guidelines",
+                "category": "data_protection"
+            },
+            
+            # Cybersecurity
+            {
+                "question": "What cybersecurity requirements must financial institutions meet?",
+                "answer": "Financial institutions must implement robust cybersecurity frameworks including regular risk assessments, multi-layered security controls, and incident response procedures. They should conduct regular penetration testing, maintain up-to-date security patches, and implement access controls with multi-factor authentication. Institutions must have cyber resilience measures, regular staff training, and maintain cybersecurity insurance. They should also participate in information sharing initiatives and report cybersecurity incidents to MAS within prescribed timeframes.",
+                "source": "MAS Technology Risk Management Guidelines",
+                "category": "cybersecurity"
+            },
+            {
+                "question": "What are the key components of a cybersecurity framework?",
+                "answer": "Key components of a cybersecurity framework include: (1) Governance and risk management structures, (2) Asset management and inventory systems, (3) Access control and identity management, (4) Security awareness and training programs, (5) Incident response and business continuity plans, (6) Regular security assessments and testing, (7) Third-party vendor management, (8) Data encryption and protection measures, (9) Network security and monitoring systems, and (10) Regular security updates and patch management.",
+                "source": "MAS Cybersecurity Framework Guidelines",
+                "category": "cybersecurity"
+            },
+            
+            # Digital Banking
+            {
+                "question": "How does MAS regulate digital payment services?",
+                "answer": "MAS regulates digital payment services under the Payment Services Act (PSA). Providers must obtain appropriate licenses (money-changing, standard payment institution, or major payment institution licenses) based on their business activities and transaction volumes. Licensed entities must meet capital requirements, maintain customer funds separately, and implement robust risk management systems. They must also comply with AML/CFT requirements, data protection laws, and reporting obligations to MAS.",
+                "source": "Payment Services Act 2019",
+                "category": "digital_banking"
+            },
+            {
+                "question": "What licenses are required for digital payment services?",
+                "answer": "Digital payment service providers need different licenses based on their activities: (1) Money-changing license for currency exchange services, (2) Standard payment institution license for smaller payment services with transaction volumes below SGD 3 million per month, and (3) Major payment institution license for larger payment services. Each license has different capital requirements, compliance obligations, and operational restrictions. License applications must demonstrate adequate financial resources, competent management, and robust risk management systems.",
+                "source": "MAS Payment Services Licensing Guide",
+                "category": "digital_banking"
+            },
+            
+            # Robo-Advisory
+            {
+                "question": "What are the key requirements for robo-advisory services in Singapore?",
+                "answer": "Robo-advisory services must be provided by licensed financial advisers and comply with MAS guidelines on automated investment management services. Providers must ensure adequate risk profiling of clients, maintain human oversight capabilities, and provide clear disclosures about algorithm limitations. They should implement safeguards against algorithm bias, maintain audit trails, and ensure clients understand the automated nature of services. Providers must also have contingency plans for system failures and maintain appropriate professional indemnity insurance.",
+                "source": "MAS Guidelines on Automated Investment Management Services",
+                "category": "ai_advisory"
+            },
+            {
+                "question": "How should robo-advisors conduct client risk profiling?",
+                "answer": "Robo-advisors should conduct comprehensive client risk profiling through: (1) Detailed questionnaires covering investment objectives, risk tolerance, time horizon, and financial circumstances, (2) Validation of client responses through follow-up questions or verification, (3) Regular updates of risk profiles as client circumstances change, (4) Clear explanation of how risk profiles influence investment recommendations, (5) Provision of alternative investment options for clients with different risk preferences, and (6) Documentation of all risk assessment processes and client interactions.",
+                "source": "MAS Robo-Advisory Risk Profiling Guidelines",
+                "category": "ai_advisory"
+            },
+            
+            # Compliance and Reporting
+            {
+                "question": "What compliance reporting requirements do banks have under MAS regulations?",
+                "answer": "Banks must submit regular regulatory returns including monthly balance sheet returns, quarterly profit and loss statements, and annual audited financial statements. They must report on capital adequacy ratios, liquidity positions, and large exposures. Banks also need to submit suspicious transaction reports, AML/CFT compliance reports, and technology risk management reports. MAS requires immediate notification of material events, operational incidents, and changes in key personnel. All reports must be submitted through MAS' electronic submission system within prescribed deadlines.",
+                "source": "MAS Notice 1015 - Reporting Requirements for Banks",
+                "category": "compliance"
+            },
+            {
+                "question": "What are the key compliance areas for financial institutions?",
+                "answer": "Key compliance areas for financial institutions include: (1) Capital adequacy and liquidity management, (2) Anti-money laundering and counter-terrorism financing, (3) Customer protection and fair dealing, (4) Data protection and privacy, (5) Cybersecurity and technology risk management, (6) Market conduct and insider trading prevention, (7) Operational risk management, (8) Third-party vendor management, (9) Business continuity planning, and (10) Regulatory reporting and disclosure requirements.",
+                "source": "MAS Compliance Framework Guidelines",
+                "category": "compliance"
+            },
+            
+            # Risk Management
+            {
+                "question": "What are the key principles of risk management for financial institutions?",
+                "answer": "Key principles of risk management include: (1) Establishing a comprehensive risk management framework with clear governance structures, (2) Identifying, measuring, monitoring, and controlling all material risks, (3) Maintaining adequate capital and liquidity buffers, (4) Implementing stress testing and scenario analysis, (5) Ensuring risk management systems are independent and have sufficient authority, (6) Regular reporting to board and senior management, (7) Ongoing training and competency development for risk management staff, and (8) Continuous improvement of risk management processes and systems.",
+                "source": "MAS Risk Management Guidelines",
+                "category": "risk_management"
+            },
+            {
+                "question": "How should financial institutions manage operational risks?",
+                "answer": "Financial institutions should manage operational risks through: (1) Comprehensive operational risk identification and assessment, (2) Implementation of robust internal controls and procedures, (3) Regular operational risk monitoring and reporting, (4) Business continuity planning and disaster recovery procedures, (5) Third-party vendor risk management, (6) Operational risk capital allocation and insurance coverage, (7) Staff training and awareness programs, and (8) Regular operational risk scenario analysis and stress testing.",
+                "source": "MAS Operational Risk Management Guidelines",
+                "category": "risk_management"
+            }
+        ]
+        
+        return comprehensive_qa
+    
+    def create_training_format(self, qa_pairs: List[Dict]) -> List[Dict]:
+        """Convert Q&A pairs to training format optimized for instruction following"""
+        training_data = []
+        
+        for qa in qa_pairs:
+            # Create multiple training formats for better learning
+            formats = [
+                # Format 1: Direct instruction
+                {
+                    "instruction": "You are an expert in Singapore financial regulations. Answer the following question accurately and comprehensively:",
+                    "input": qa['question'],
+                    "output": qa['answer'],
+                    "source": qa['source'],
+                    "category": qa['category']
+                },
+                # Format 2: Context-based
+                {
+                    "instruction": "Based on Singapore financial regulations, provide a detailed answer to:",
+                    "input": qa['question'],
+                    "output": qa['answer'],
+                    "source": qa['source'],
+                    "category": qa['category']
+                },
+                # Format 3: Professional tone
+                {
+                    "instruction": "As a financial regulation expert, explain:",
+                    "input": qa['question'],
+                    "output": qa['answer'],
+                    "source": qa['source'],
+                    "category": qa['category']
+                }
+            ]
+            
+            training_data.extend(formats)
+        
+        return training_data
+    
+    def save_dataset(self, qa_pairs: List[Dict], training_data: List[Dict]):
+        """Save the enhanced dataset"""
+        
+        # Save Q&A pairs
+        qa_file = self.output_dir / "enhanced_financial_regulation_qa.json"
+        with open(qa_file, 'w', encoding='utf-8') as f:
+            json.dump(qa_pairs, f, indent=2, ensure_ascii=False)
+        
+        # Save training data
+        training_file = self.output_dir / "enhanced_training_data.json"
+        with open(training_file, 'w', encoding='utf-8') as f:
+            json.dump(training_data, f, indent=2, ensure_ascii=False)
+        
+        # Save CSV for easy viewing
+        df_qa = pd.DataFrame(qa_pairs)
+        df_qa.to_csv(self.output_dir / "enhanced_financial_regulation_qa.csv", index=False)
+        
+        print(f"✅ Enhanced dataset created:")
+        print(f"  📁 Q&A pairs: {len(qa_pairs)}")
+        print(f"  📁 Training samples: {len(training_data)}")
+        print(f"  📁 Files saved to: {self.output_dir}")
+        
+        return qa_file, training_file
+
+def main():
+    """Create enhanced dataset"""
+    print("🚀 Creating Enhanced Financial Regulation Dataset...")
+    
+    prep = ImprovedFinancialDatasetPrep()
+    
+    # Create comprehensive Q&A pairs
+    qa_pairs = prep.create_comprehensive_dataset()
+    
+    # Create training format
+    training_data = prep.create_training_format(qa_pairs)
+    
+    # Save dataset
+    prep.save_dataset(qa_pairs, training_data)
+    
+    print("\n📊 Dataset Summary:")
+    print(f"  • Original Q&A pairs: {len(qa_pairs)}")
+    print(f"  • Training samples (with augmentation): {len(training_data)}")
+    print(f"  • Categories: {set(item['category'] for item in qa_pairs)}")
+    
+    print("\n💡 This enhanced dataset should provide much better training results!")
+
+if __name__ == "__main__":
+    main()
