@@ -248,13 +248,13 @@ class ModelEvaluator:
             rag_time=rag_time,
         )
     
-    def load_test_dataset(self, dataset_path: str = "processed_data/enhanced_financial_regulation_qa.json") -> List[Dict]:
-        """Load test dataset for evaluation"""
+    def load_test_dataset(self, dataset_path: str = "processed_data/holdout_test_set.json") -> List[Dict]:
+        """Load holdout test dataset for evaluation (no data leakage)"""
         with open(dataset_path, 'r', encoding='utf-8') as f:
             data = json.load(f)
         
-        # Use first 5 samples for evaluation (can be increased)
-        return data[:5]
+        # Use all holdout samples for evaluation (these are NOT in training data)
+        return data
     
     def run_evaluation(self, test_dataset: Optional[List[Dict]] = None) -> List[EvaluationResult]:
         """Run comprehensive evaluation"""

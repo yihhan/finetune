@@ -1,0 +1,50 @@
+[
+  {
+    "question": "What are the minimum capital requirements for major payment institutions under the Payment Services Act?",
+    "answer": "Major payment institutions must maintain minimum base capital of SGD 1 million. They must also maintain additional capital based on their payment transaction volume and risk profile. The total capital requirement is calculated based on the higher of base capital or a percentage of average monthly payment transaction volume.",
+    "source": "MAS Payment Services Regulations",
+    "category": "digital_banking"
+  },
+  {
+    "question": "How frequently must banks submit their capital adequacy returns to MAS?",
+    "answer": "Banks must submit capital adequacy returns to MAS on a monthly basis. These returns must be submitted within 15 business days after the end of each month. Banks must also provide quarterly detailed capital adequacy reports within 21 business days after the quarter end.",
+    "source": "MAS Reporting Requirements",
+    "category": "capital_requirements"
+  },
+  {
+    "question": "What is the maximum transaction threshold for enhanced customer due diligence under AML requirements?",
+    "answer": "Enhanced customer due diligence is required for transactions exceeding SGD 20,000 or equivalent in foreign currency. Financial institutions must also apply enhanced due diligence for politically exposed persons (PEPs) regardless of transaction amount, and for customers from high-risk jurisdictions as designated by MAS.",
+    "source": "MAS AML/CFT Guidelines",
+    "category": "anti_money_laundering"
+  },
+  {
+    "question": "What are the notification requirements for data breaches affecting customer information?",
+    "answer": "Financial institutions must notify MAS of data breaches within 1 hour of discovery if the breach involves customer data or could affect financial services. They must also notify affected customers without undue delay, typically within 72 hours. A detailed incident report must be submitted to MAS within 14 days.",
+    "source": "MAS Technology Risk Guidelines",
+    "category": "data_protection"
+  },
+  {
+    "question": "What is the minimum frequency for penetration testing of critical systems?",
+    "answer": "Financial institutions must conduct penetration testing of critical systems at least annually. For internet-facing systems and critical infrastructure, testing should be conducted semi-annually or after significant system changes. Third-party penetration testing by qualified security firms is required at least once every two years.",
+    "source": "MAS Cybersecurity Requirements",
+    "category": "cybersecurity"
+  },
+  {
+    "question": "What are the licensing requirements for providing robo-advisory services in Singapore?",
+    "answer": "Providers of robo-advisory services must hold a Capital Markets Services License for fund management or providing investment advice. They must meet minimum base capital requirements of SGD 250,000 for fund management license. Additionally, they must comply with MAS guidelines on automated investment management services including algorithm governance and client suitability assessments.",
+    "source": "MAS Licensing Requirements",
+    "category": "ai_advisory"
+  },
+  {
+    "question": "What is the cooling-off period for customers purchasing investment products through digital channels?",
+    "answer": "Customers have a 7-day cooling-off period for investment products purchased through digital channels, during which they can cancel the purchase without penalty. This applies to unit trusts, investment-linked insurance products, and structured products. The cooling-off period starts from the date of purchase confirmation.",
+    "source": "MAS Consumer Protection Guidelines",
+    "category": "compliance"
+  },
+  {
+    "question": "What are the operational resilience requirements for critical business functions?",
+    "answer": "Financial institutions must ensure critical business functions can resume within 2 hours of disruption and fully recover within 4 hours. They must maintain business continuity plans, conduct regular testing, and have alternative processing sites. Recovery time objectives must be documented and tested at least annually.",
+    "source": "MAS Operational Resilience Guidelines",
+    "category": "risk_management"
+  }
+]
