@@ -11,8 +11,20 @@ import time
 from typing import List, Dict, Any
 from pathlib import Path
 import random
-import openai
-from tqdm import tqdm
+try:
+    import openai
+    OPENAI_AVAILABLE = True
+except ImportError:
+    OPENAI_AVAILABLE = False
+    print("OpenAI not installed - using mock generation")
+
+try:
+    from tqdm import tqdm
+except ImportError:
+    # Simple fallback if tqdm not available
+    def tqdm(iterable, desc="", leave=True):
+        print(f"{desc}...")
+        return iterable
 
 # Set up OpenAI (you'll need to add your API key)
 # openai.api_key = "your-openai-api-key-here"
