@@ -31,7 +31,7 @@ try:
     base_for_peft = base_for_peft.to(device)
     
     # Load fine-tuned model
-    model_path = "gpt2_comprehensive_singapore_model/checkpoint-324"
+    model_path = "gpt2_comprehensive_singapore_model/checkpoint-1080"
     finetuned_model = PeftModel.from_pretrained(base_for_peft, model_path)
     print(f"✅ Loaded FINE-TUNED model from: {model_path}")
     
