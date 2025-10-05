@@ -92,7 +92,7 @@ test_cases = [
     }
 ]
 
-def generate_full_response(model, question, max_length=200):
+def generate_full_response(model, question, max_new_tokens=200):
     """Generate full response from model"""
     prompt = f"Q: {question} A:"
     
@@ -105,11 +105,9 @@ def generate_full_response(model, question, max_length=200):
             start_time = time.time()
             outputs = model.generate(
                 **inputs,
-                max_length=inputs['input_ids'].shape[1] + max_length,
-                num_return_sequences=1,
-                temperature=0.7,
-                do_sample=True,
-                top_p=0.9,
+                max_new_tokens=max_new_tokens,
+                num_beams=5,
+                do_sample=False,
                 repetition_penalty=1.1,
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,

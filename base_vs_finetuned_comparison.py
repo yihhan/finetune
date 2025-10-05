@@ -53,7 +53,7 @@ test_questions = [
     "What are cybersecurity requirements for banks?"
 ]
 
-def generate_response(model, question, max_length=100):
+def generate_response(model, question, max_new_tokens=128):
     """Generate response from model"""
     prompt = f"Q: {question} A:"
     
@@ -66,11 +66,9 @@ def generate_response(model, question, max_length=100):
             start_time = time.time()
             outputs = model.generate(
                 **inputs,
-                max_length=inputs['input_ids'].shape[1] + max_length,
-                num_return_sequences=1,
-                temperature=0.7,
-                do_sample=True,
-                top_p=0.9,
+                max_new_tokens=max_new_tokens,
+                num_beams=4,
+                do_sample=False,
                 repetition_penalty=1.1,
                 pad_token_id=tokenizer.eos_token_id,
                 eos_token_id=tokenizer.eos_token_id,
