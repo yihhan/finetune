@@ -125,20 +125,50 @@ def generate_full_response(model, question, max_new_tokens=200):
     except Exception as e:
         return f"Error: {str(e)}", 0.0
 
+def _tokenize(text: str):
+    import re
+    return re.findall(r"\w+", (text or "").lower())
+
+def _lcs_length(a_tokens, b_tokens):
+    # Token-level LCS for ROUGE-L recall approximation
+    n, m = len(a_tokens), len(b_tokens)
+    if n == 0 or m == 0:
+        return 0
+    dp = [0] * (m + 1)
+    for i in range(1, n + 1):
+        prev = 0
+        for j in range(1, m + 1):
+            temp = dp[j]
+            if a_tokens[i - 1] == b_tokens[j - 1]:
+                dp[j] = prev + 1
+            else:
+                dp[j] = max(dp[j], dp[j - 1])
+            prev = temp
+    return dp[m]
+
+def _dedupe_sentences(text: str) -> str:
+    sentences = [s.strip() for s in (text or "").split('. ') if s.strip()]
+    seen = set()
+    ordered = []
+    for s in sentences:
+        if s not in seen:
+            seen.add(s)
+            ordered.append(s)
+    return '. '.join(ordered)
+
 def calculate_similarity_score(ground_truth, response):
-    """Calculate simple word overlap similarity"""
+    """ROUGE-L recall approximation via token-level LCS (0..1)."""
     if not ground_truth or not response:
         return 0.0
-    
-    # Convert to lowercase and split into words
-    gt_words = set(ground_truth.lower().split())
-    resp_words = set(response.lower().split())
-    
-    # Calculate Jaccard similarity
-    intersection = len(gt_words.intersection(resp_words))
-    union = len(gt_words.union(resp_words))
-    
-    return intersection / union if union > 0 else 0.0
+    # Light cleaning to avoid repetition inflating/deflating scores
+    gt_clean = _dedupe_sentences(ground_truth)
+    resp_clean = _dedupe_sentences(response)
+    gt_tokens = _tokenize(gt_clean)
+    resp_tokens = _tokenize(resp_clean)
+    if len(gt_tokens) == 0:
+        return 0.0
+    lcs = _lcs_length(gt_tokens, resp_tokens)
+    return lcs / len(gt_tokens)
 
 def evaluate_response_quality(ground_truth, response):
     """Evaluate response quality with multiple metrics"""
@@ -224,11 +254,11 @@ for i, test_case in enumerate(test_cases, 1):
     
     print(f"\n🔵 BASE MODEL RESPONSE:")
     print(f"   {base_response}")
-    print(f"   📊 Similarity: {base_eval['similarity']:.3f} | Quality: {base_eval['quality']} | Key Terms: {base_eval['key_terms']} | Time: {base_time:.2f}s")
+    print(f"   📊 ROUGE-L (recall): {base_eval['similarity']:.3f} | Quality: {base_eval['quality']} | Key Terms: {base_eval['key_terms']} | Time: {base_time:.2f}s")
     
     print(f"\n🟢 FINE-TUNED MODEL RESPONSE:")
     print(f"   {ft_response}")
-    print(f"   📊 Similarity: {ft_eval['similarity']:.3f} | Quality: {ft_eval['quality']} | Key Terms: {ft_eval['key_terms']} | Time: {ft_time:.2f}s")
+    print(f"   📊 ROUGE-L (recall): {ft_eval['similarity']:.3f} | Quality: {ft_eval['quality']} | Key Terms: {ft_eval['key_terms']} | Time: {ft_time:.2f}s")
     
     print(f"\n🏆 WINNER: {winner}")
     print(f"   Similarity Difference: {abs(ft_eval['similarity'] - base_eval['similarity']):.3f}")
@@ -243,7 +273,7 @@ print(f"\n" + "=" * 100)
 print("🎯 COMPREHENSIVE GROUND TRUTH COMPARISON RESULTS")
 print("=" * 100)
 
-print(f"📊 AVERAGE SIMILARITY TO GROUND TRUTH:")
+print(f"📊 AVERAGE ROUGE-L (recall) VS GROUND TRUTH:")
 print(f"   🔵 Base Model: {avg_base_similarity:.3f} ({avg_base_similarity*100:.1f}%)")
 print(f"   🟢 Fine-tuned: {avg_ft_similarity:.3f} ({avg_ft_similarity*100:.1f}%)")
 print(f"   📈 Improvement: {improvement_ratio:.2f}x ({(improvement_ratio-1)*100:+.1f}%)")
