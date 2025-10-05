@@ -13,6 +13,13 @@ print("=" * 100)
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Device: {device}")
 
+# Optional: semantic similarity model (graceful fallback if unavailable)
+try:
+    from sentence_transformers import SentenceTransformer, util as st_util
+    SEM_MODEL = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+except Exception:
+    SEM_MODEL = None
+
 # Load models
 print("\n🔄 Loading models...")
 try:
@@ -127,7 +134,12 @@ def generate_full_response(model, question, max_new_tokens=200):
 
 def _tokenize(text: str):
     import re
-    return re.findall(r"\w+", (text or "").lower())
+    tokens = re.findall(r"\w+", (text or "").lower())
+    # Remove common stopwords to avoid inflating scores with filler words
+    stop = {
+        'the','a','an','and','or','to','of','in','on','for','by','with','is','are','as','that','this','it','be','at','from','which','these','those','was','were','will','shall','should','can','may','must'
+    }
+    return [t for t in tokens if t not in stop]
 
 def _lcs_length(a_tokens, b_tokens):
     # Token-level LCS for ROUGE-L recall approximation
@@ -170,6 +182,43 @@ def calculate_similarity_score(ground_truth, response):
     lcs = _lcs_length(gt_tokens, resp_tokens)
     return lcs / len(gt_tokens)
 
+DOMAIN_TERMS = [
+    'monetary authority of singapore','monetary authority','mas','singapore','sgd','dollar','bank','banking',
+    'aml','cft','stro','suspicious transaction reporting office','payment services act','psa','notice 626',
+    'notice 637','capital','adequacy','regulation','regulatory','prudential'
+]
+
+def key_term_coverage(ground_truth: str, response: str) -> float:
+    """Fraction of domain terms present in response, weighted by presence in ground truth when possible."""
+    if not response:
+        return 0.0
+    resp_lower = (response or '').lower()
+    gt_lower = (ground_truth or '').lower()
+    terms = DOMAIN_TERMS
+    if not terms:
+        return 0.0
+    # Weight terms that appear in ground truth higher
+    total = 0.0
+    score = 0.0
+    for term in terms:
+        w = 2.0 if term in gt_lower else 1.0
+        total += w
+        if term in resp_lower:
+            score += w
+    return score / total if total > 0 else 0.0
+
+def semantic_similarity(ground_truth: str, response: str):
+    """Cosine similarity via Sentence Transformers if available (0..1), else None."""
+    if SEM_MODEL is None or not ground_truth or not response:
+        return None
+    try:
+        emb = SEM_MODEL.encode([ground_truth, response], convert_to_tensor=True, normalize_embeddings=True)
+        sim = st_util.cos_sim(emb[0], emb[1]).item()
+        # Ensure within [0,1]
+        return max(0.0, min(1.0, (sim + 1) / 2)) if sim < 0 else max(0.0, min(1.0, sim))
+    except Exception:
+        return None
+
 def evaluate_response_quality(ground_truth, response):
     """Evaluate response quality with multiple metrics"""
     if not response or response.startswith("Error:"):
@@ -177,7 +226,10 @@ def evaluate_response_quality(ground_truth, response):
             "similarity": 0.0,
             "length_ratio": 0.0,
             "key_terms": 0,
-            "quality": "error"
+            "quality": "error",
+            "key_term_coverage": 0.0,
+            "semantic": None,
+            "composite": 0.0,
         }
     
     # Similarity score
@@ -189,13 +241,22 @@ def evaluate_response_quality(ground_truth, response):
     # Key financial terms present
     financial_terms = ['mas', 'singapore', 'monetary authority', 'bank', 'financial', 'regulation', 'capital', 'requirement']
     key_terms_found = sum(1 for term in financial_terms if term in response.lower())
+    coverage = key_term_coverage(ground_truth, response)
+    sem = semantic_similarity(ground_truth, response)
+    
+    # Composite score (weights): ROUGE-L 0.5, semantic 0.4 (if available), coverage 0.1
+    if sem is None:
+        composite = 0.9 * similarity + 0.1 * coverage
+    else:
+        composite = 0.5 * similarity + 0.4 * sem + 0.1 * coverage
+    composite = max(0.0, min(1.0, composite))
     
     # Overall quality assessment
-    if similarity > 0.3 and key_terms_found >= 3:
+    if composite > 0.5 and key_terms_found >= 3:
         quality = "excellent"
-    elif similarity > 0.2 and key_terms_found >= 2:
+    elif composite > 0.35 and key_terms_found >= 2:
         quality = "good"
-    elif similarity > 0.1 or key_terms_found >= 1:
+    elif composite > 0.2 or key_terms_found >= 1:
         quality = "moderate"
     else:
         quality = "poor"
@@ -204,7 +265,10 @@ def evaluate_response_quality(ground_truth, response):
         "similarity": similarity,
         "length_ratio": length_ratio,
         "key_terms": key_terms_found,
-        "quality": quality
+        "quality": quality,
+        "key_term_coverage": coverage,
+        "semantic": sem,
+        "composite": composite,
     }
 
 # Run comprehensive comparison
@@ -237,11 +301,11 @@ for i, test_case in enumerate(test_cases, 1):
     total_base_similarity += base_eval["similarity"]
     total_ft_similarity += ft_eval["similarity"]
     
-    # Determine winner
-    if ft_eval["similarity"] > base_eval["similarity"] + 0.05:  # 5% threshold
+    # Determine winner using composite score primarily
+    if ft_eval.get("composite", 0.0) > base_eval.get("composite", 0.0) + 0.03:  # 3% threshold
         ft_better_count += 1
         winner = "🟢 FINE-TUNED BETTER"
-    elif base_eval["similarity"] > ft_eval["similarity"] + 0.05:
+    elif base_eval.get("composite", 0.0) > ft_eval.get("composite", 0.0) + 0.03:
         base_better_count += 1
         winner = "🔵 BASE BETTER"
     else:
@@ -254,11 +318,11 @@ for i, test_case in enumerate(test_cases, 1):
     
     print(f"\n🔵 BASE MODEL RESPONSE:")
     print(f"   {base_response}")
-    print(f"   📊 ROUGE-L (recall): {base_eval['similarity']:.3f} | Quality: {base_eval['quality']} | Key Terms: {base_eval['key_terms']} | Time: {base_time:.2f}s")
+    print(f"   📊 ROUGE-L: {base_eval['similarity']:.3f} | Semantic: {base_eval['semantic'] if base_eval['semantic'] is not None else 'n/a'} | Coverage: {base_eval['key_term_coverage']:.2f} | Composite: {base_eval['composite']:.3f} | Quality: {base_eval['quality']} | Time: {base_time:.2f}s")
     
     print(f"\n🟢 FINE-TUNED MODEL RESPONSE:")
     print(f"   {ft_response}")
-    print(f"   📊 ROUGE-L (recall): {ft_eval['similarity']:.3f} | Quality: {ft_eval['quality']} | Key Terms: {ft_eval['key_terms']} | Time: {ft_time:.2f}s")
+    print(f"   📊 ROUGE-L: {ft_eval['similarity']:.3f} | Semantic: {ft_eval['semantic'] if ft_eval['semantic'] is not None else 'n/a'} | Coverage: {ft_eval['key_term_coverage']:.2f} | Composite: {ft_eval['composite']:.3f} | Quality: {ft_eval['quality']} | Time: {ft_time:.2f}s")
     
     print(f"\n🏆 WINNER: {winner}")
     print(f"   Similarity Difference: {abs(ft_eval['similarity'] - base_eval['similarity']):.3f}")
