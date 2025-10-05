@@ -1,0 +1,503 @@
+{
+  "metadata": {
+    "total_qa_pairs": 63,
+    "sources_processed": 23,
+    "source_list": [
+      "huggingface_mas/comprehensive_qa.json",
+      "huggingface_mas/training_data.json",
+      "huggingface_mas/mas_dataset.json",
+      "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "mas_real/MAS_Guidelines_PDPA.txt",
+      "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "mas_real/MAS_Notice_1015_Reporting.txt",
+      "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "mas_guidelines/MAS_Notice_626_AML_CFT.txt",
+      "mas_guidelines/MAS_Notice_637_Capital_Adequacy.txt",
+      "mas_guidelines/MAS_Technology_Risk_Management.txt",
+      "huggingface_mas/Banking_Act.txt",
+      "huggingface_mas/Insurance_Act.txt",
+      "huggingface_mas/MAS_Act.txt",
+      "huggingface_mas/Payment_Services_Act.txt",
+      "huggingface_mas/Securities_and_Futures_Act.txt",
+      "regulations/Cybersecurity_Requirements.txt",
+      "regulations/Payment_Services_Act.txt",
+      "regulations/Personal_Data_Protection_Act.txt"
+    ],
+    "generation_date": "2025-10-05",
+    "target_performance": "ChatGPT-4 comparable",
+    "format": "Singapore Financial Regulations Q&A"
+  },
+  "training_data_gpt2": [
+    "Q: What does MAS stand for? A: MAS stands for Monetary Authority of Singapore, which is Singapore's central bank and integrated financial regulator.",
+    "Q: What currency does Singapore use? A: Singapore uses the Singapore Dollar (SGD) as its official currency.",
+    "Q: Who regulates banks in Singapore? A: The Monetary Authority of Singapore (MAS) regulates banks and other financial institutions in Singapore.",
+    "Q: What is MAS's role in Singapore? A: MAS serves as Singapore's central bank and integrated financial regulator, responsible for monetary policy, financial supervision, and maintaining financial stability.",
+    "Q: What does SFA stand for? A: SFA stands for Securities and Futures Act, which is Singapore's primary legislation governing capital markets activities.",
+    "Q: What is PDPA? A: PDPA is the Personal Data Protection Act, Singapore's main data protection law that governs the collection, use, and disclosure of personal data.",
+    "Q: What is the role of MAS in Singapore's financial system? A: MAS is Singapore's central bank and integrated financial regulator responsible for monetary policy, financial supervision, and financial market development.",
+    "Q: What are MAS's main regulatory functions? A: MAS regulates banks, insurers, capital markets intermediaries, and payment service providers to ensure financial stability and consumer protection.",
+    "Q: What is the purpose of MAS Notice 626? A: MAS Notice 626 establishes requirements for prevention of money laundering and countering the financing of terrorism for financial institutions.",
+    "Q: What are the capital adequacy requirements for Singapore banks? A: Singapore banks must maintain minimum capital ratios: 6.5% CET1, 8% Tier 1, and 10% Total capital ratios under Basel III standards.",
+    "Q: How does MAS regulate fintech companies? A: MAS regulates fintech companies through licensing requirements, sandbox programs, and technology risk management guidelines to promote innovation while ensuring financial stability.",
+    "Q: What is MAS's approach to digital banking? A: MAS supports digital banking through digital bank licenses, technology risk management guidelines, and cybersecurity requirements to enable innovation while maintaining security.",
+    "Q: What are the requirements for payment service providers? A: Payment service providers must obtain appropriate licenses, meet capital requirements, implement AML/CFT measures, and comply with data protection requirements.",
+    "Q: How does MAS ensure financial stability? A: MAS ensures financial stability through prudential regulation, macroprudential policies, stress testing, and crisis management frameworks.",
+    "Q: What is MAS's position on cryptocurrency? A: MAS regulates cryptocurrency activities through the Payment Services Act, requiring licensing for digital payment token services and implementing risk management requirements.",
+    "Q: What are the reporting requirements for financial institutions? A: Financial institutions must submit regular reports on capital adequacy, liquidity, risk exposures, and compliance status to MAS as specified in relevant notices.",
+    "Q: What is the Monetary Authority of Singapore Act? A: The MAS Act establishes MAS as Singapore's central bank and integrated financial regulator with powers to regulate and supervise financial institutions.",
+    "Q: What are MAS's main functions? A: MAS's main functions include monetary policy, financial supervision, financial market development, and currency issuance.",
+    "Q: What does the Banking Act regulate? A: The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight.",
+    "Q: What are the key requirements under the Banking Act? A: Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS.",
+    "Q: What does the Securities and Futures Act cover? A: The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements.",
+    "Q: Who must be licensed under the Securities and Futures Act? A: Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS.",
+    "Q: What does the Insurance Act regulate? A: The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection.",
+    "Q: What are the capital requirements for insurers? A: Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS.",
+    "Q: What does the Payment Services Act regulate? A: The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore.",
+    "Q: What licenses are required for payment services? A: Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes.",
+    "Q: What is the scope of these guidelines? A: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions.",
+    "Q: Are these guidelines mandatory? A: While not legally binding, MAS expects compliance with these principles.",
+    "Q: How should institutions implement these guidelines? A: Develop policies and procedures that align with the guidelines.",
+    "Q: What documentation is required? A: Maintain documentation of policies, procedures, and compliance activities.",
+    "Q: What are MAS cybersecurity requirements? A: MAS requires financial institutions to implement comprehensive cybersecurity frameworks including risk assessments, incident response plans, and regular security testing.",
+    "Q: How often must banks conduct penetration testing? A: Financial institutions must conduct penetration testing of critical systems at least annually, with more frequent testing for high-risk systems.",
+    "Q: What are cyber incident reporting requirements? A: Financial institutions must notify MAS of significant cyber incidents within 1 hour of discovery and submit detailed reports within specified timeframes.",
+    "Q: What is the purpose of this MAS notice? A: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: Who must comply with these requirements? A: All licensed financial institutions, including banks, insurance companies, and capital markets intermediaries operating in Singapore.",
+    "Q: What are the key compliance requirements? A: Key requirements include establishing appropriate policies and procedures, implementing risk management frameworks, and maintaining adequate capital and liquidity.",
+    "Q: What are the reporting obligations? A: Institutions must submit regular reports to MAS on their compliance status, risk exposures, and any material changes to their operations.",
+    "Q: What are the penalties for non-compliance? A: Non-compliance may result in regulatory action including fines, restrictions on business activities, or revocation of licenses.",
+    "Q: How often should these requirements be reviewed? A: Requirements should be reviewed regularly and updated as necessary to reflect changes in the regulatory environment and business operations.",
+    "Q: What are Singapore's AML requirements? A: Singapore financial institutions must implement Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) measures as specified in MAS Notice 626.",
+    "Q: What is STRO in Singapore? A: STRO is the Suspicious Transaction Reporting Office that receives and analyzes suspicious transaction reports from financial institutions in Singapore.",
+    "Q: How long do financial institutions have to report suspicious transactions? A: Financial institutions must report suspicious transactions to STRO within 15 days of detection, regardless of the transaction amount.",
+    "Q: How often must banks report capital adequacy to MAS? A: Banks must submit capital adequacy returns to MAS on a monthly basis as specified in MAS Notice 637.",
+    "Q: What is Basel III in Singapore? A: Basel III is the international regulatory framework for bank capital adequacy that Singapore has implemented through MAS regulations to strengthen bank resilience.",
+    "Q: What is the purpose of this regulation? A: This regulation ensures guidelines on automated investment management services in Singapore's financial sector.",
+    "Q: What are the key requirements? A: The key requirements include proper documentation, regular reporting, and adherence to specified standards.",
+    "Q: What are the capital requirements for payment institutions? A: Major payment institutions in Singapore must maintain minimum base capital of SGD 1 million under the Payment Services Act.",
+    "Q: What is a digital banking license? A: Digital banking licenses allow banks to operate without physical branches in Singapore, subject to MAS approval and minimum capital requirements of SGD 1.5 billion.",
+    "Q: What cybersecurity framework should be implemented? A: Institutions should implement a comprehensive cybersecurity framework including risk assessment, controls, and incident response.",
+    "Q: What are the key security controls? A: Multi-layered security controls including firewalls, encryption, access controls, and monitoring systems.",
+    "Q: How often should penetration testing be conducted? A: Regular penetration testing should be conducted at least annually or after significant system changes.",
+    "Q: What incident response procedures are required? A: Institutions must have documented incident response procedures and report cybersecurity incidents to MAS.",
+    "Q: What staff training is required? A: Regular cybersecurity training must be provided to all staff, with specialized training for IT personnel.",
+    "Q: What insurance requirements apply? A: Institutions should maintain appropriate cybersecurity insurance coverage. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+    "Q: What are the capital requirements? A: Capital requirements vary by license type, ranging from SGD 100,000 to SGD 1 million. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+    "Q: How should customer funds be handled? A: Customer funds must be kept separate from the provider's own funds in designated accounts.",
+    "Q: What AML/CFT requirements apply? A: All payment service providers must comply with AML/CFT requirements including customer due diligence and suspicious transaction reporting.",
+    "Q: What consent is required for data collection? A: Financial institutions must obtain clear and informed consent before collecting personal data.",
+    "Q: How should data be used? A: Data should only be used for the purposes specified at the time of collection.",
+    "Q: What security measures are required? A: Institutions must implement appropriate technical and organizational measures to protect personal data.",
+    "Q: What are the data breach notification requirements? A: Data breaches must be reported to the Personal Data Protection Commission within 72 hours. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+    "Q: How long can data be retained? A: Data should only be retained as long as necessary for business or legal purposes.",
+    "Q: What are individuals' rights? A: Individuals have the right to access, correct, and withdraw consent for their personal data."
+  ],
+  "detailed_qa_pairs": [
+    {
+      "question": "What does MAS stand for?",
+      "answer": "MAS stands for Monetary Authority of Singapore, which is Singapore's central bank and integrated financial regulator.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "What currency does Singapore use?",
+      "answer": "Singapore uses the Singapore Dollar (SGD) as its official currency.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "Who regulates banks in Singapore?",
+      "answer": "The Monetary Authority of Singapore (MAS) regulates banks and other financial institutions in Singapore.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "What is MAS's role in Singapore?",
+      "answer": "MAS serves as Singapore's central bank and integrated financial regulator, responsible for monetary policy, financial supervision, and maintaining financial stability.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "What does SFA stand for?",
+      "answer": "SFA stands for Securities and Futures Act, which is Singapore's primary legislation governing capital markets activities.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "What is PDPA?",
+      "answer": "PDPA is the Personal Data Protection Act, Singapore's main data protection law that governs the collection, use, and disclosure of personal data.",
+      "source": "foundational",
+      "format": "core_knowledge"
+    },
+    {
+      "question": "What is the role of MAS in Singapore's financial system?",
+      "answer": "MAS is Singapore's central bank and integrated financial regulator responsible for monetary policy, financial supervision, and financial market development.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are MAS's main regulatory functions?",
+      "answer": "MAS regulates banks, insurers, capital markets intermediaries, and payment service providers to ensure financial stability and consumer protection.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is the purpose of MAS Notice 626?",
+      "answer": "MAS Notice 626 establishes requirements for prevention of money laundering and countering the financing of terrorism for financial institutions.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the capital adequacy requirements for Singapore banks?",
+      "answer": "Singapore banks must maintain minimum capital ratios: 6.5% CET1, 8% Tier 1, and 10% Total capital ratios under Basel III standards.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "How does MAS regulate fintech companies?",
+      "answer": "MAS regulates fintech companies through licensing requirements, sandbox programs, and technology risk management guidelines to promote innovation while ensuring financial stability.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is MAS's approach to digital banking?",
+      "answer": "MAS supports digital banking through digital bank licenses, technology risk management guidelines, and cybersecurity requirements to enable innovation while maintaining security.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the requirements for payment service providers?",
+      "answer": "Payment service providers must obtain appropriate licenses, meet capital requirements, implement AML/CFT measures, and comply with data protection requirements.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "How does MAS ensure financial stability?",
+      "answer": "MAS ensures financial stability through prudential regulation, macroprudential policies, stress testing, and crisis management frameworks.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is MAS's position on cryptocurrency?",
+      "answer": "MAS regulates cryptocurrency activities through the Payment Services Act, requiring licensing for digital payment token services and implementing risk management requirements.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the reporting requirements for financial institutions?",
+      "answer": "Financial institutions must submit regular reports on capital adequacy, liquidity, risk exposures, and compliance status to MAS as specified in relevant notices.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is the Monetary Authority of Singapore Act?",
+      "answer": "The MAS Act establishes MAS as Singapore's central bank and integrated financial regulator with powers to regulate and supervise financial institutions.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are MAS's main functions?",
+      "answer": "MAS's main functions include monetary policy, financial supervision, financial market development, and currency issuance.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Banking Act regulate?",
+      "answer": "The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the key requirements under the Banking Act?",
+      "answer": "Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Securities and Futures Act cover?",
+      "answer": "The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "Who must be licensed under the Securities and Futures Act?",
+      "answer": "Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Insurance Act regulate?",
+      "answer": "The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the capital requirements for insurers?",
+      "answer": "Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Payment Services Act regulate?",
+      "answer": "The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What licenses are required for payment services?",
+      "answer": "Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is the scope of these guidelines?",
+      "answer": "These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "Are these guidelines mandatory?",
+      "answer": "While not legally binding, MAS expects compliance with these principles.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How should institutions implement these guidelines?",
+      "answer": "Develop policies and procedures that align with the guidelines.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What documentation is required?",
+      "answer": "Maintain documentation of policies, procedures, and compliance activities.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are MAS cybersecurity requirements?",
+      "answer": "MAS requires financial institutions to implement comprehensive cybersecurity frameworks including risk assessments, incident response plans, and regular security testing.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "How often must banks conduct penetration testing?",
+      "answer": "Financial institutions must conduct penetration testing of critical systems at least annually, with more frequent testing for high-risk systems.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What are cyber incident reporting requirements?",
+      "answer": "Financial institutions must notify MAS of significant cyber incidents within 1 hour of discovery and submit detailed reports within specified timeframes.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What is the purpose of this MAS notice?",
+      "answer": "This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "Who must comply with these requirements?",
+      "answer": "All licensed financial institutions, including banks, insurance companies, and capital markets intermediaries operating in Singapore.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the key compliance requirements?",
+      "answer": "Key requirements include establishing appropriate policies and procedures, implementing risk management frameworks, and maintaining adequate capital and liquidity.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the reporting obligations?",
+      "answer": "Institutions must submit regular reports to MAS on their compliance status, risk exposures, and any material changes to their operations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the penalties for non-compliance?",
+      "answer": "Non-compliance may result in regulatory action including fines, restrictions on business activities, or revocation of licenses.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How often should these requirements be reviewed?",
+      "answer": "Requirements should be reviewed regularly and updated as necessary to reflect changes in the regulatory environment and business operations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are Singapore's AML requirements?",
+      "answer": "Singapore financial institutions must implement Anti-Money Laundering (AML) and Counter-Financing of Terrorism (CFT) measures as specified in MAS Notice 626.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What is STRO in Singapore?",
+      "answer": "STRO is the Suspicious Transaction Reporting Office that receives and analyzes suspicious transaction reports from financial institutions in Singapore.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "How long do financial institutions have to report suspicious transactions?",
+      "answer": "Financial institutions must report suspicious transactions to STRO within 15 days of detection, regardless of the transaction amount.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "How often must banks report capital adequacy to MAS?",
+      "answer": "Banks must submit capital adequacy returns to MAS on a monthly basis as specified in MAS Notice 637.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What is Basel III in Singapore?",
+      "answer": "Basel III is the international regulatory framework for bank capital adequacy that Singapore has implemented through MAS regulations to strengthen bank resilience.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What is the purpose of this regulation?",
+      "answer": "This regulation ensures guidelines on automated investment management services in Singapore's financial sector.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the key requirements?",
+      "answer": "The key requirements include proper documentation, regular reporting, and adherence to specified standards.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the capital requirements for payment institutions?",
+      "answer": "Major payment institutions in Singapore must maintain minimum base capital of SGD 1 million under the Payment Services Act.",
+      "source": "huggingface_mas/Payment_Services_Act.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What is a digital banking license?",
+      "answer": "Digital banking licenses allow banks to operate without physical branches in Singapore, subject to MAS approval and minimum capital requirements of SGD 1.5 billion.",
+      "source": "huggingface_mas/Payment_Services_Act.txt",
+      "format": "synthetic"
+    },
+    {
+      "question": "What cybersecurity framework should be implemented?",
+      "answer": "Institutions should implement a comprehensive cybersecurity framework including risk assessment, controls, and incident response.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the key security controls?",
+      "answer": "Multi-layered security controls including firewalls, encryption, access controls, and monitoring systems.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How often should penetration testing be conducted?",
+      "answer": "Regular penetration testing should be conducted at least annually or after significant system changes.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What incident response procedures are required?",
+      "answer": "Institutions must have documented incident response procedures and report cybersecurity incidents to MAS.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What staff training is required?",
+      "answer": "Regular cybersecurity training must be provided to all staff, with specialized training for IT personnel.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What insurance requirements apply?",
+      "answer": "Institutions should maintain appropriate cybersecurity insurance coverage. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+      "source": "regulations/Cybersecurity_Requirements.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the capital requirements?",
+      "answer": "Capital requirements vary by license type, ranging from SGD 100,000 to SGD 1 million. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+      "source": "regulations/Payment_Services_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How should customer funds be handled?",
+      "answer": "Customer funds must be kept separate from the provider's own funds in designated accounts.",
+      "source": "regulations/Payment_Services_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What AML/CFT requirements apply?",
+      "answer": "All payment service providers must comply with AML/CFT requirements including customer due diligence and suspicious transaction reporting.",
+      "source": "regulations/Payment_Services_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What consent is required for data collection?",
+      "answer": "Financial institutions must obtain clear and informed consent before collecting personal data.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How should data be used?",
+      "answer": "Data should only be used for the purposes specified at the time of collection.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What security measures are required?",
+      "answer": "Institutions must implement appropriate technical and organizational measures to protect personal data.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are the data breach notification requirements?",
+      "answer": "Data breaches must be reported to the Personal Data Protection Commission within 72 hours. Non-compliance with these requirements may result in regulatory action by MAS, including penalties and license revocation.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "How long can data be retained?",
+      "answer": "Data should only be retained as long as necessary for business or legal purposes.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    },
+    {
+      "question": "What are individuals' rights?",
+      "answer": "Individuals have the right to access, correct, and withdraw consent for their personal data.",
+      "source": "regulations/Personal_Data_Protection_Act.txt",
+      "format": "explicit_qa"
+    }
+  ],
+  "statistics": {
+    "format_breakdown": {
+      "core_knowledge": 6,
+      "json_qa": 20,
+      "explicit_qa": 27,
+      "synthetic": 10
+    },
+    "source_breakdown": {
+      "foundational": 6,
+      "huggingface_mas/comprehensive_qa.json": 10,
+      "huggingface_mas/training_data.json": 10,
+      "mas_real/MAS_Guidelines_AI_Advisory.txt": 4,
+      "mas_real/MAS_Guidelines_Cybersecurity.txt": 3,
+      "mas_real/MAS_Notice_1015_Reporting.txt": 6,
+      "mas_real/MAS_Notice_626_AML_CFT.txt": 3,
+      "mas_real/MAS_Notice_637_Capital_Adequacy.txt": 2,
+      "mas_guidelines/MAS_Guidelines_AI_Advisory.txt": 2,
+      "huggingface_mas/Payment_Services_Act.txt": 2,
+      "regulations/Cybersecurity_Requirements.txt": 6,
+      "regulations/Payment_Services_Act.txt": 3,
+      "regulations/Personal_Data_Protection_Act.txt": 6
+    },
+    "average_answer_length": 131.42857142857142
+  }
+}
