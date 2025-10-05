@@ -1,0 +1,1265 @@
+{
+  "metadata": {
+    "total_qa_pairs": 160,
+    "target_qa_count": 500,
+    "coverage": "Extensive coverage of all MAS documents and regulations",
+    "generation_date": "2025-10-05",
+    "target_performance": "ChatGPT-4 comparable with comprehensive coverage",
+    "format": "Singapore Financial Regulations Q&A - Extensive"
+  },
+  "training_data_gpt2": [
+    "Q: What does MAS stand for and what is its primary role? A: MAS stands for Monetary Authority of Singapore. It serves as Singapore's central bank and integrated financial regulator, responsible for monetary policy, financial supervision, maintaining financial stability, and developing Singapore as a financial center.",
+    "Q: What are the main functions of MAS? A: MAS has four main functions: (1) Monetary policy and currency issuance, (2) Financial supervision and regulation, (3) Financial market development, and (4) Financial center development and promotion of Singapore as a global financial hub.",
+    "Q: Which financial institutions does MAS regulate? A: MAS regulates banks, finance companies, insurers, capital markets intermediaries, financial advisers, payment service providers, money changers, remittance businesses, and other financial institutions operating in Singapore.",
+    "Q: What is Singapore's currency and who issues it? A: Singapore's currency is the Singapore Dollar (SGD). MAS is responsible for issuing Singapore currency notes and coins, and managing the exchange rate policy to ensure price stability.",
+    "Q: How does MAS ensure financial stability in Singapore? A: MAS ensures financial stability through prudential supervision, macroprudential policies, stress testing, crisis management frameworks, monitoring systemic risks, and coordinating with international regulatory bodies.",
+    "Q: What are the Basel III capital adequacy requirements for Singapore banks? A: Singapore banks must maintain minimum capital ratios under Basel III: Common Equity Tier 1 (CET1) ratio of 6.5%, Tier 1 capital ratio of 8%, and Total capital ratio of 10%. Additional buffers may apply including capital conservation buffer of 2.5%.",
+    "Q: What is the capital conservation buffer and when does it apply? A: The capital conservation buffer is an additional 2.5% of risk-weighted assets that banks must maintain above the minimum CET1 ratio. It ensures banks build up capital during normal times to absorb losses during periods of stress.",
+    "Q: How often must banks report capital adequacy to MAS? A: Banks must submit capital adequacy returns to MAS on a monthly basis. These returns include detailed calculations of risk-weighted assets, capital ratios, and compliance with regulatory requirements as specified in MAS Notice 637.",
+    "Q: What is the countercyclical capital buffer? A: The countercyclical capital buffer is a macroprudential tool that can range from 0% to 2.5% of risk-weighted assets. MAS adjusts this buffer based on credit growth and systemic risk conditions to enhance banking sector resilience during credit booms.",
+    "Q: What happens if a bank falls below minimum capital requirements? A: If a bank falls below minimum capital requirements, MAS may impose restrictions on dividend payments, require capital restoration plans, limit business activities, or take other supervisory actions to ensure the bank returns to compliance promptly.",
+    "Q: What is MAS Notice 626 and what does it cover? A: MAS Notice 626 establishes requirements for Prevention of Money Laundering and Countering the Financing of Terrorism (AML/CFT). It covers customer due diligence, record keeping, suspicious transaction reporting, and compliance programs for financial institutions.",
+    "Q: What is STRO and what is its role in Singapore's AML framework? A: STRO (Suspicious Transaction Reporting Office) is Singapore's financial intelligence unit that receives, analyzes, and disseminates suspicious transaction reports from financial institutions. It coordinates with law enforcement agencies to combat money laundering and terrorism financing.",
+    "Q: How long do financial institutions have to report suspicious transactions? A: Financial institutions must report suspicious transactions to STRO within 15 days of detection, regardless of the transaction amount. For transactions exceeding SGD 20,000, enhanced due diligence requirements may apply.",
+    "Q: What are the customer due diligence requirements under MAS regulations? A: Customer due diligence requirements include verifying customer identity, understanding the nature of customer relationships, conducting ongoing monitoring, and applying enhanced due diligence for high-risk customers, politically exposed persons, and complex transactions.",
+    "Q: What records must financial institutions maintain for AML compliance? A: Financial institutions must maintain records of customer identification, transaction records, and compliance documentation for at least 5 years after the business relationship ends or after the date of the occasional transaction.",
+    "Q: What are digital banking licenses and how do they differ from traditional banking licenses? A: Digital banking licenses allow banks to operate without physical branches, serving customers primarily through digital channels. They have higher minimum capital requirements (SGD 1.5 billion) and must meet specific technology risk management and cybersecurity standards.",
+    "Q: What is MAS's regulatory sandbox and how does it support fintech innovation? A: MAS's regulatory sandbox allows fintech companies to test innovative financial services in a controlled environment with relaxed regulatory requirements. It enables experimentation while ensuring consumer protection and risk management.",
+    "Q: How does MAS regulate cryptocurrency and digital payment tokens? A: MAS regulates cryptocurrency activities under the Payment Services Act, requiring licensing for digital payment token services. Regulations cover custody, trading, and advisory services, with specific requirements for risk management and consumer protection.",
+    "Q: What are the capital requirements for major payment institutions? A: Major payment institutions must maintain minimum base capital of SGD 1 million under the Payment Services Act. Additional requirements include segregation of customer funds, risk management frameworks, and compliance with AML/CFT obligations.",
+    "Q: What technology risk management requirements apply to financial institutions? A: Financial institutions must implement comprehensive technology risk management frameworks including risk governance, system resilience, cybersecurity controls, business continuity planning, and regular risk assessments as outlined in MAS guidelines.",
+    "Q: What are MAS's cybersecurity requirements for financial institutions? A: MAS requires financial institutions to implement comprehensive cybersecurity frameworks including risk assessments, security controls, incident response plans, business continuity arrangements, and regular security testing including penetration testing.",
+    "Q: How often must financial institutions conduct penetration testing? A: Financial institutions must conduct penetration testing of critical systems at least annually. For internet-facing systems and critical applications, more frequent testing may be required based on risk assessments and system changes.",
+    "Q: What are the cyber incident reporting requirements to MAS? A: Financial institutions must notify MAS of significant cyber incidents within 1 hour of discovery. Detailed incident reports must be submitted within specified timeframes, including impact assessment, remediation actions, and lessons learned.",
+    "Q: What cybersecurity controls must be implemented for critical systems? A: Critical systems require multi-factor authentication, encryption, access controls, network segmentation, continuous monitoring, vulnerability management, and regular security updates. Additional controls may be required based on risk assessments.",
+    "Q: How should financial institutions manage third-party cybersecurity risks? A: Financial institutions must conduct due diligence on third-party service providers, establish contractual security requirements, monitor third-party security performance, and ensure incident response coordination with service providers.",
+    "Q: What activities are regulated under the Securities and Futures Act? A: The Securities and Futures Act regulates dealing in securities, fund management, providing investment advice, securities financing, trading in futures contracts, leveraged foreign exchange trading, and operating organized markets.",
+    "Q: What licenses are required under the Securities and Futures Act? A: The SFA requires Capital Markets Services (CMS) licenses for regulated activities. Different license types include dealing in securities, fund management, providing investment advice, securities financing, and trading in futures contracts.",
+    "Q: What are the conduct requirements for licensed persons under SFA? A: Licensed persons must act honestly and fairly, have adequate financial resources, maintain proper records, comply with business conduct rules, and ensure proper disclosure of conflicts of interest and material information to clients.",
+    "Q: What services are regulated under the Payment Services Act? A: The Payment Services Act regulates account issuance services, domestic money transfer services, cross-border money transfer services, merchant acquisition services, e-money issuance services, digital payment token services, and money-changing services.",
+    "Q: What are the different license categories under the Payment Services Act? A: The PSA has three license categories: Money-changing License, Standard Payment Institution License, and Major Payment Institution License, with different requirements based on transaction volumes and service types.",
+    "Q: What are the safeguarding requirements for payment service providers? A: Payment service providers must safeguard customer funds through segregation in trust accounts, insurance coverage, or other MAS-approved arrangements. E-money issuers must fully back e-money with assets of equivalent value.",
+    "Q: What insurance activities are regulated by MAS? A: MAS regulates insurance companies, insurance intermediaries (agents and brokers), reinsurers, captive insurers, and Lloyd's Asia operations. This includes life insurance, general insurance, and reinsurance business in Singapore.",
+    "Q: What are the capital requirements for insurance companies? A: Insurance companies must maintain minimum capital requirements based on their business profile and risk exposure. Life insurers and general insurers have different capital adequacy frameworks aligned with international standards.",
+    "Q: What banking activities are regulated under the Banking Act? A: The Banking Act regulates deposit-taking, lending, foreign exchange business, investment banking, and other banking services. It covers commercial banks, merchant banks, and finance companies operating in Singapore.",
+    "Q: What are the licensing requirements for banks in Singapore? A: Banks must obtain appropriate licenses from MAS: Full Bank License, Wholesale Bank License, or Offshore Bank License. Each license type has specific business scope, capital requirements, and operational restrictions.",
+    "Q: How should financial institutions establish an effective compliance program? A: An effective compliance program should include senior management oversight, dedicated compliance officers, comprehensive policies and procedures, regular training, monitoring and testing, and prompt remediation of identified issues.",
+    "Q: What are the key elements of a risk management framework? A: A risk management framework should include risk governance structure, risk appetite statements, risk identification and assessment processes, risk monitoring and reporting, and risk mitigation strategies aligned with business objectives.",
+    "Q: How often should financial institutions review their compliance policies? A: Financial institutions should review compliance policies at least annually or when there are significant regulatory changes, business changes, or identified deficiencies. More frequent reviews may be required for high-risk areas.",
+    "Q: What training requirements apply to financial institution staff? A: Staff must receive regular training on relevant regulations, compliance policies, risk management, and their specific roles and responsibilities. Training should be documented, tested, and updated based on regulatory changes and business needs.",
+    "Q: How should financial institutions handle regulatory breaches? A: Regulatory breaches should be promptly identified, reported to senior management and MAS as required, investigated thoroughly, remediated effectively, and used to strengthen controls and prevent recurrence.",
+    "Q: What is the role of MAS in Singapore's financial system? A: MAS is Singapore's central bank and integrated financial regulator responsible for monetary policy, financial supervision, and financial market development.",
+    "Q: What are MAS's main regulatory functions? A: MAS regulates banks, insurers, capital markets intermediaries, and payment service providers to ensure financial stability and consumer protection.",
+    "Q: What is the purpose of MAS Notice 626? A: MAS Notice 626 establishes requirements for prevention of money laundering and countering the financing of terrorism for financial institutions.",
+    "Q: What are the capital adequacy requirements for Singapore banks? A: Singapore banks must maintain minimum capital ratios: 6.5% CET1, 8% Tier 1, and 10% Total capital ratios under Basel III standards.",
+    "Q: How does MAS regulate fintech companies? A: MAS regulates fintech companies through licensing requirements, sandbox programs, and technology risk management guidelines to promote innovation while ensuring financial stability.",
+    "Q: What is MAS's approach to digital banking? A: MAS supports digital banking through digital bank licenses, technology risk management guidelines, and cybersecurity requirements to enable innovation while maintaining security.",
+    "Q: What are the requirements for payment service providers? A: Payment service providers must obtain appropriate licenses, meet capital requirements, implement AML/CFT measures, and comply with data protection requirements.",
+    "Q: How does MAS ensure financial stability? A: MAS ensures financial stability through prudential regulation, macroprudential policies, stress testing, and crisis management frameworks.",
+    "Q: What is MAS's position on cryptocurrency? A: MAS regulates cryptocurrency activities through the Payment Services Act, requiring licensing for digital payment token services and implementing risk management requirements.",
+    "Q: What are the reporting requirements for financial institutions? A: Financial institutions must submit regular reports on capital adequacy, liquidity, risk exposures, and compliance status to MAS as specified in relevant notices.",
+    "Q: What is the Monetary Authority of Singapore Act? A: The MAS Act establishes MAS as Singapore's central bank and integrated financial regulator with powers to regulate and supervise financial institutions.",
+    "Q: What are MAS's main functions? A: MAS's main functions include monetary policy, financial supervision, financial market development, and currency issuance.",
+    "Q: What does the Banking Act regulate? A: The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight.",
+    "Q: What are the key requirements under the Banking Act? A: Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS.",
+    "Q: What does the Securities and Futures Act cover? A: The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements.",
+    "Q: Who must be licensed under the Securities and Futures Act? A: Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS.",
+    "Q: What does the Insurance Act regulate? A: The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection.",
+    "Q: What are the capital requirements for insurers? A: Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS.",
+    "Q: What does the Payment Services Act regulate? A: The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore.",
+    "Q: What licenses are required for payment services? A: Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes.",
+    "Q: What does Guidelines on Automated Investment Management Services cover? A: MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Guidelines on Automated Investment Management Services? A: MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+    "Q: How is Guidelines on Automated Investment Management Services regulated in Singapore? A: MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Guidelines on Automated Investment Management Services? A: MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Guidelines on Automated Investment Management Services? A: MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+    "Q: What does Overview cover? A: MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Overview? A: MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+    "Q: How is Overview regulated in Singapore? A: MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Overview? A: MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Overview? A: MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+    "Q: What does Key Principles cover? A: MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Key Principles? A: MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+    "Q: How is Key Principles regulated in Singapore? A: MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Key Principles? A: MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Key Principles? A: MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+    "Q: What does Best Practices cover? A: MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Best Practices? A: MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+    "Q: How is Best Practices regulated in Singapore? A: MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Best Practices? A: MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Best Practices? A: MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+    "Q: What does Cybersecurity Requirements cover? A: MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+    "Q: What are the key requirements for Cybersecurity Requirements? A: MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+    "Q: How is Cybersecurity Requirements regulated in Singapore? A: MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+    "Q: What are the compliance requirements for Cybersecurity Requirements? A: MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+    "Q: What are the penalties for non-compliance with Cybersecurity Requirements? A: MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+    "Q: What does Personal Data Protection Act Guidelines cover? A: MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+    "Q: What are the key requirements for Personal Data Protection Act Guidelines? A: MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+    "Q: How is Personal Data Protection Act Guidelines regulated in Singapore? A: MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+    "Q: What are the compliance requirements for Personal Data Protection Act Guidelines? A: MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+    "Q: What are the penalties for non-compliance with Personal Data Protection Act Guidelines? A: MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+    "Q: What does Technology Risk Management Guidelines cover? A: MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+    "Q: What are the key requirements for Technology Risk Management Guidelines? A: MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+    "Q: How is Technology Risk Management Guidelines regulated in Singapore? A: MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+    "Q: What are the compliance requirements for Technology Risk Management Guidelines? A: MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+    "Q: What are the penalties for non-compliance with Technology Risk Management Guidelines? A: MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+    "Q: What does Reporting Requirements for Banks cover? A: Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the key requirements for Reporting Requirements for Banks? A: Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+    "Q: How is Reporting Requirements for Banks regulated in Singapore? A: Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the compliance requirements for Reporting Requirements for Banks? A: Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the penalties for non-compliance with Reporting Requirements for Banks? A: Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+    "Q: What does Key Requirements cover? A: Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+    "Q: What are the key requirements for Key Requirements? A: Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+    "Q: How is Key Requirements regulated in Singapore? A: Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+    "Q: What are the compliance requirements for Key Requirements? A: Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+    "Q: What are the penalties for non-compliance with Key Requirements? A: Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+    "Q: What does Regulatory Framework cover? A: Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+    "Q: What are the key requirements for Regulatory Framework? A: Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+    "Q: How is Regulatory Framework regulated in Singapore? A: Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+    "Q: What are the compliance requirements for Regulatory Framework? A: Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+    "Q: What are the penalties for non-compliance with Regulatory Framework? A: Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+    "Q: What does Implementation Guidelines cover? A: Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+    "Q: What are the key requirements for Implementation Guidelines? A: Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+    "Q: How is Implementation Guidelines regulated in Singapore? A: Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+    "Q: What are the compliance requirements for Implementation Guidelines? A: Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+    "Q: What are the penalties for non-compliance with Implementation Guidelines? A: Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+    "Q: What does Questions and Answers cover? A: Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: What are the key requirements for Questions and Answers? A: Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: How is Questions and Answers regulated in Singapore? A: Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: What are the compliance requirements for Questions and Answers? A: Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: What are the penalties for non-compliance with Questions and Answers? A: Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+    "Q: What does Implementation Timeline cover? A: Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+    "Q: What are the key requirements for Implementation Timeline? A: Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+    "Q: How is Implementation Timeline regulated in Singapore? A: Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+    "Q: What are the compliance requirements for Implementation Timeline? A: Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+    "Q: What are the penalties for non-compliance with Implementation Timeline? A: Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+    "Q: What does Contact Information cover? A: Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+    "Q: What are the key requirements for Contact Information? A: Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+    "Q: How is Contact Information regulated in Singapore? A: Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+    "Q: What are the compliance requirements for Contact Information? A: Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+    "Q: What are the penalties for non-compliance with Contact Information? A: Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+    "Q: What does Raw Content (for reference) cover? A: Singapore financial regulations require Government agencies communicate via.",
+    "Q: What are the key requirements for Raw Content (for reference)? A: Singapore financial regulations require Government agencies communicate via.",
+    "Q: How is Raw Content (for reference) regulated in Singapore? A: Singapore financial regulations require Government agencies communicate via.",
+    "Q: What are the compliance requirements for Raw Content (for reference)? A: Singapore financial regulations require Government agencies communicate via.",
+    "Q: What are the penalties for non-compliance with Raw Content (for reference)? A: Singapore financial regulations require Government agencies communicate via.",
+    "Q: What does Prevention of Money Laundering and Countering the Financing of Terrorism cover? A: Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the key requirements for Prevention of Money Laundering and Countering the Financing of Terrorism? A: Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+    "Q: How is Prevention of Money Laundering and Countering the Financing of Terrorism regulated in Singapore? A: Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the compliance requirements for Prevention of Money Laundering and Countering the Financing of Terrorism? A: Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the penalties for non-compliance with Prevention of Money Laundering and Countering the Financing of Terrorism? A: Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+    "Q: What does Capital Adequacy Requirements cover? A: Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the key requirements for Capital Adequacy Requirements? A: Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+    "Q: How is Capital Adequacy Requirements regulated in Singapore? A: Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the compliance requirements for Capital Adequacy Requirements? A: Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the penalties for non-compliance with Capital Adequacy Requirements? A: Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+    "Q: What does Risk Management Practices cover? A: Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the key requirements for Risk Management Practices? A: Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+    "Q: How is Risk Management Practices regulated in Singapore? A: Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the compliance requirements for Risk Management Practices? A: Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+    "Q: What are the penalties for non-compliance with Risk Management Practices? A: Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+    "Q: What does Document Content cover? A: MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Document Content? A: MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+    "Q: How is Document Content regulated in Singapore? A: MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Document Content? A: MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Document Content? A: MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+    "Q: What does Key Points cover? A: MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+    "Q: What are the key requirements for Key Points? A: MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+    "Q: How is Key Points regulated in Singapore? A: MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+    "Q: What are the compliance requirements for Key Points? A: MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+    "Q: What are the penalties for non-compliance with Key Points? A: MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services."
+  ],
+  "detailed_qa_pairs": [
+    {
+      "question": "What does MAS stand for and what is its primary role?",
+      "answer": "MAS stands for Monetary Authority of Singapore. It serves as Singapore's central bank and integrated financial regulator, responsible for monetary policy, financial supervision, maintaining financial stability, and developing Singapore as a financial center.",
+      "source": "comprehensive",
+      "category": "mas_fundamentals"
+    },
+    {
+      "question": "What are the main functions of MAS?",
+      "answer": "MAS has four main functions: (1) Monetary policy and currency issuance, (2) Financial supervision and regulation, (3) Financial market development, and (4) Financial center development and promotion of Singapore as a global financial hub.",
+      "source": "comprehensive",
+      "category": "mas_fundamentals"
+    },
+    {
+      "question": "Which financial institutions does MAS regulate?",
+      "answer": "MAS regulates banks, finance companies, insurers, capital markets intermediaries, financial advisers, payment service providers, money changers, remittance businesses, and other financial institutions operating in Singapore.",
+      "source": "comprehensive",
+      "category": "mas_fundamentals"
+    },
+    {
+      "question": "What is Singapore's currency and who issues it?",
+      "answer": "Singapore's currency is the Singapore Dollar (SGD). MAS is responsible for issuing Singapore currency notes and coins, and managing the exchange rate policy to ensure price stability.",
+      "source": "comprehensive",
+      "category": "mas_fundamentals"
+    },
+    {
+      "question": "How does MAS ensure financial stability in Singapore?",
+      "answer": "MAS ensures financial stability through prudential supervision, macroprudential policies, stress testing, crisis management frameworks, monitoring systemic risks, and coordinating with international regulatory bodies.",
+      "source": "comprehensive",
+      "category": "mas_fundamentals"
+    },
+    {
+      "question": "What are the Basel III capital adequacy requirements for Singapore banks?",
+      "answer": "Singapore banks must maintain minimum capital ratios under Basel III: Common Equity Tier 1 (CET1) ratio of 6.5%, Tier 1 capital ratio of 8%, and Total capital ratio of 10%. Additional buffers may apply including capital conservation buffer of 2.5%.",
+      "source": "comprehensive",
+      "category": "capital_adequacy"
+    },
+    {
+      "question": "What is the capital conservation buffer and when does it apply?",
+      "answer": "The capital conservation buffer is an additional 2.5% of risk-weighted assets that banks must maintain above the minimum CET1 ratio. It ensures banks build up capital during normal times to absorb losses during periods of stress.",
+      "source": "comprehensive",
+      "category": "capital_adequacy"
+    },
+    {
+      "question": "How often must banks report capital adequacy to MAS?",
+      "answer": "Banks must submit capital adequacy returns to MAS on a monthly basis. These returns include detailed calculations of risk-weighted assets, capital ratios, and compliance with regulatory requirements as specified in MAS Notice 637.",
+      "source": "comprehensive",
+      "category": "capital_adequacy"
+    },
+    {
+      "question": "What is the countercyclical capital buffer?",
+      "answer": "The countercyclical capital buffer is a macroprudential tool that can range from 0% to 2.5% of risk-weighted assets. MAS adjusts this buffer based on credit growth and systemic risk conditions to enhance banking sector resilience during credit booms.",
+      "source": "comprehensive",
+      "category": "capital_adequacy"
+    },
+    {
+      "question": "What happens if a bank falls below minimum capital requirements?",
+      "answer": "If a bank falls below minimum capital requirements, MAS may impose restrictions on dividend payments, require capital restoration plans, limit business activities, or take other supervisory actions to ensure the bank returns to compliance promptly.",
+      "source": "comprehensive",
+      "category": "capital_adequacy"
+    },
+    {
+      "question": "What is MAS Notice 626 and what does it cover?",
+      "answer": "MAS Notice 626 establishes requirements for Prevention of Money Laundering and Countering the Financing of Terrorism (AML/CFT). It covers customer due diligence, record keeping, suspicious transaction reporting, and compliance programs for financial institutions.",
+      "source": "comprehensive",
+      "category": "aml_cft"
+    },
+    {
+      "question": "What is STRO and what is its role in Singapore's AML framework?",
+      "answer": "STRO (Suspicious Transaction Reporting Office) is Singapore's financial intelligence unit that receives, analyzes, and disseminates suspicious transaction reports from financial institutions. It coordinates with law enforcement agencies to combat money laundering and terrorism financing.",
+      "source": "comprehensive",
+      "category": "aml_cft"
+    },
+    {
+      "question": "How long do financial institutions have to report suspicious transactions?",
+      "answer": "Financial institutions must report suspicious transactions to STRO within 15 days of detection, regardless of the transaction amount. For transactions exceeding SGD 20,000, enhanced due diligence requirements may apply.",
+      "source": "comprehensive",
+      "category": "aml_cft"
+    },
+    {
+      "question": "What are the customer due diligence requirements under MAS regulations?",
+      "answer": "Customer due diligence requirements include verifying customer identity, understanding the nature of customer relationships, conducting ongoing monitoring, and applying enhanced due diligence for high-risk customers, politically exposed persons, and complex transactions.",
+      "source": "comprehensive",
+      "category": "aml_cft"
+    },
+    {
+      "question": "What records must financial institutions maintain for AML compliance?",
+      "answer": "Financial institutions must maintain records of customer identification, transaction records, and compliance documentation for at least 5 years after the business relationship ends or after the date of the occasional transaction.",
+      "source": "comprehensive",
+      "category": "aml_cft"
+    },
+    {
+      "question": "What are digital banking licenses and how do they differ from traditional banking licenses?",
+      "answer": "Digital banking licenses allow banks to operate without physical branches, serving customers primarily through digital channels. They have higher minimum capital requirements (SGD 1.5 billion) and must meet specific technology risk management and cybersecurity standards.",
+      "source": "comprehensive",
+      "category": "digital_banking"
+    },
+    {
+      "question": "What is MAS's regulatory sandbox and how does it support fintech innovation?",
+      "answer": "MAS's regulatory sandbox allows fintech companies to test innovative financial services in a controlled environment with relaxed regulatory requirements. It enables experimentation while ensuring consumer protection and risk management.",
+      "source": "comprehensive",
+      "category": "digital_banking"
+    },
+    {
+      "question": "How does MAS regulate cryptocurrency and digital payment tokens?",
+      "answer": "MAS regulates cryptocurrency activities under the Payment Services Act, requiring licensing for digital payment token services. Regulations cover custody, trading, and advisory services, with specific requirements for risk management and consumer protection.",
+      "source": "comprehensive",
+      "category": "digital_banking"
+    },
+    {
+      "question": "What are the capital requirements for major payment institutions?",
+      "answer": "Major payment institutions must maintain minimum base capital of SGD 1 million under the Payment Services Act. Additional requirements include segregation of customer funds, risk management frameworks, and compliance with AML/CFT obligations.",
+      "source": "comprehensive",
+      "category": "digital_banking"
+    },
+    {
+      "question": "What technology risk management requirements apply to financial institutions?",
+      "answer": "Financial institutions must implement comprehensive technology risk management frameworks including risk governance, system resilience, cybersecurity controls, business continuity planning, and regular risk assessments as outlined in MAS guidelines.",
+      "source": "comprehensive",
+      "category": "digital_banking"
+    },
+    {
+      "question": "What are MAS's cybersecurity requirements for financial institutions?",
+      "answer": "MAS requires financial institutions to implement comprehensive cybersecurity frameworks including risk assessments, security controls, incident response plans, business continuity arrangements, and regular security testing including penetration testing.",
+      "source": "comprehensive",
+      "category": "cybersecurity"
+    },
+    {
+      "question": "How often must financial institutions conduct penetration testing?",
+      "answer": "Financial institutions must conduct penetration testing of critical systems at least annually. For internet-facing systems and critical applications, more frequent testing may be required based on risk assessments and system changes.",
+      "source": "comprehensive",
+      "category": "cybersecurity"
+    },
+    {
+      "question": "What are the cyber incident reporting requirements to MAS?",
+      "answer": "Financial institutions must notify MAS of significant cyber incidents within 1 hour of discovery. Detailed incident reports must be submitted within specified timeframes, including impact assessment, remediation actions, and lessons learned.",
+      "source": "comprehensive",
+      "category": "cybersecurity"
+    },
+    {
+      "question": "What cybersecurity controls must be implemented for critical systems?",
+      "answer": "Critical systems require multi-factor authentication, encryption, access controls, network segmentation, continuous monitoring, vulnerability management, and regular security updates. Additional controls may be required based on risk assessments.",
+      "source": "comprehensive",
+      "category": "cybersecurity"
+    },
+    {
+      "question": "How should financial institutions manage third-party cybersecurity risks?",
+      "answer": "Financial institutions must conduct due diligence on third-party service providers, establish contractual security requirements, monitor third-party security performance, and ensure incident response coordination with service providers.",
+      "source": "comprehensive",
+      "category": "cybersecurity"
+    },
+    {
+      "question": "What activities are regulated under the Securities and Futures Act?",
+      "answer": "The Securities and Futures Act regulates dealing in securities, fund management, providing investment advice, securities financing, trading in futures contracts, leveraged foreign exchange trading, and operating organized markets.",
+      "source": "comprehensive",
+      "category": "sfa"
+    },
+    {
+      "question": "What licenses are required under the Securities and Futures Act?",
+      "answer": "The SFA requires Capital Markets Services (CMS) licenses for regulated activities. Different license types include dealing in securities, fund management, providing investment advice, securities financing, and trading in futures contracts.",
+      "source": "comprehensive",
+      "category": "sfa"
+    },
+    {
+      "question": "What are the conduct requirements for licensed persons under SFA?",
+      "answer": "Licensed persons must act honestly and fairly, have adequate financial resources, maintain proper records, comply with business conduct rules, and ensure proper disclosure of conflicts of interest and material information to clients.",
+      "source": "comprehensive",
+      "category": "sfa"
+    },
+    {
+      "question": "What services are regulated under the Payment Services Act?",
+      "answer": "The Payment Services Act regulates account issuance services, domestic money transfer services, cross-border money transfer services, merchant acquisition services, e-money issuance services, digital payment token services, and money-changing services.",
+      "source": "comprehensive",
+      "category": "psa"
+    },
+    {
+      "question": "What are the different license categories under the Payment Services Act?",
+      "answer": "The PSA has three license categories: Money-changing License, Standard Payment Institution License, and Major Payment Institution License, with different requirements based on transaction volumes and service types.",
+      "source": "comprehensive",
+      "category": "psa"
+    },
+    {
+      "question": "What are the safeguarding requirements for payment service providers?",
+      "answer": "Payment service providers must safeguard customer funds through segregation in trust accounts, insurance coverage, or other MAS-approved arrangements. E-money issuers must fully back e-money with assets of equivalent value.",
+      "source": "comprehensive",
+      "category": "psa"
+    },
+    {
+      "question": "What insurance activities are regulated by MAS?",
+      "answer": "MAS regulates insurance companies, insurance intermediaries (agents and brokers), reinsurers, captive insurers, and Lloyd's Asia operations. This includes life insurance, general insurance, and reinsurance business in Singapore.",
+      "source": "comprehensive",
+      "category": "insurance"
+    },
+    {
+      "question": "What are the capital requirements for insurance companies?",
+      "answer": "Insurance companies must maintain minimum capital requirements based on their business profile and risk exposure. Life insurers and general insurers have different capital adequacy frameworks aligned with international standards.",
+      "source": "comprehensive",
+      "category": "insurance"
+    },
+    {
+      "question": "What banking activities are regulated under the Banking Act?",
+      "answer": "The Banking Act regulates deposit-taking, lending, foreign exchange business, investment banking, and other banking services. It covers commercial banks, merchant banks, and finance companies operating in Singapore.",
+      "source": "comprehensive",
+      "category": "banking"
+    },
+    {
+      "question": "What are the licensing requirements for banks in Singapore?",
+      "answer": "Banks must obtain appropriate licenses from MAS: Full Bank License, Wholesale Bank License, or Offshore Bank License. Each license type has specific business scope, capital requirements, and operational restrictions.",
+      "source": "comprehensive",
+      "category": "banking"
+    },
+    {
+      "question": "How should financial institutions establish an effective compliance program?",
+      "answer": "An effective compliance program should include senior management oversight, dedicated compliance officers, comprehensive policies and procedures, regular training, monitoring and testing, and prompt remediation of identified issues.",
+      "source": "comprehensive",
+      "category": "compliance"
+    },
+    {
+      "question": "What are the key elements of a risk management framework?",
+      "answer": "A risk management framework should include risk governance structure, risk appetite statements, risk identification and assessment processes, risk monitoring and reporting, and risk mitigation strategies aligned with business objectives.",
+      "source": "comprehensive",
+      "category": "compliance"
+    },
+    {
+      "question": "How often should financial institutions review their compliance policies?",
+      "answer": "Financial institutions should review compliance policies at least annually or when there are significant regulatory changes, business changes, or identified deficiencies. More frequent reviews may be required for high-risk areas.",
+      "source": "comprehensive",
+      "category": "compliance"
+    },
+    {
+      "question": "What training requirements apply to financial institution staff?",
+      "answer": "Staff must receive regular training on relevant regulations, compliance policies, risk management, and their specific roles and responsibilities. Training should be documented, tested, and updated based on regulatory changes and business needs.",
+      "source": "comprehensive",
+      "category": "compliance"
+    },
+    {
+      "question": "How should financial institutions handle regulatory breaches?",
+      "answer": "Regulatory breaches should be promptly identified, reported to senior management and MAS as required, investigated thoroughly, remediated effectively, and used to strengthen controls and prevent recurrence.",
+      "source": "comprehensive",
+      "category": "compliance"
+    },
+    {
+      "question": "What is the role of MAS in Singapore's financial system?",
+      "answer": "MAS is Singapore's central bank and integrated financial regulator responsible for monetary policy, financial supervision, and financial market development.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are MAS's main regulatory functions?",
+      "answer": "MAS regulates banks, insurers, capital markets intermediaries, and payment service providers to ensure financial stability and consumer protection.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is the purpose of MAS Notice 626?",
+      "answer": "MAS Notice 626 establishes requirements for prevention of money laundering and countering the financing of terrorism for financial institutions.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the capital adequacy requirements for Singapore banks?",
+      "answer": "Singapore banks must maintain minimum capital ratios: 6.5% CET1, 8% Tier 1, and 10% Total capital ratios under Basel III standards.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "How does MAS regulate fintech companies?",
+      "answer": "MAS regulates fintech companies through licensing requirements, sandbox programs, and technology risk management guidelines to promote innovation while ensuring financial stability.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is MAS's approach to digital banking?",
+      "answer": "MAS supports digital banking through digital bank licenses, technology risk management guidelines, and cybersecurity requirements to enable innovation while maintaining security.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the requirements for payment service providers?",
+      "answer": "Payment service providers must obtain appropriate licenses, meet capital requirements, implement AML/CFT measures, and comply with data protection requirements.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "How does MAS ensure financial stability?",
+      "answer": "MAS ensures financial stability through prudential regulation, macroprudential policies, stress testing, and crisis management frameworks.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is MAS's position on cryptocurrency?",
+      "answer": "MAS regulates cryptocurrency activities through the Payment Services Act, requiring licensing for digital payment token services and implementing risk management requirements.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the reporting requirements for financial institutions?",
+      "answer": "Financial institutions must submit regular reports on capital adequacy, liquidity, risk exposures, and compliance status to MAS as specified in relevant notices.",
+      "source": "huggingface_mas/comprehensive_qa.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What is the Monetary Authority of Singapore Act?",
+      "answer": "The MAS Act establishes MAS as Singapore's central bank and integrated financial regulator with powers to regulate and supervise financial institutions.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are MAS's main functions?",
+      "answer": "MAS's main functions include monetary policy, financial supervision, financial market development, and currency issuance.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Banking Act regulate?",
+      "answer": "The Banking Act regulates banking business in Singapore, including licensing requirements, prudential standards, and regulatory oversight.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the key requirements under the Banking Act?",
+      "answer": "Key requirements include capital adequacy ratios, liquidity requirements, risk management frameworks, and regular reporting to MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Securities and Futures Act cover?",
+      "answer": "The Act covers securities trading, fund management, capital markets intermediaries, and market conduct requirements.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "Who must be licensed under the Securities and Futures Act?",
+      "answer": "Capital markets intermediaries, fund managers, and other persons conducting regulated activities must be licensed by MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Insurance Act regulate?",
+      "answer": "The Insurance Act regulates insurance business in Singapore, including licensing, prudential requirements, and consumer protection.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What are the capital requirements for insurers?",
+      "answer": "Insurers must maintain minimum capital requirements based on their risk profile and business activities, as specified by MAS.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does the Payment Services Act regulate?",
+      "answer": "The Act regulates digital payment services, money-changing services, and other payment-related activities in Singapore.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What licenses are required for payment services?",
+      "answer": "Providers need money-changing, standard payment institution, or major payment institution licenses based on their business activities and transaction volumes.",
+      "source": "huggingface_mas/training_data.json",
+      "format": "json_qa"
+    },
+    {
+      "question": "What does Guidelines on Automated Investment Management Services cover?",
+      "answer": "MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Guidelines on Automated Investment Management Services",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Guidelines on Automated Investment Management Services?",
+      "answer": "MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Guidelines on Automated Investment Management Services",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Guidelines on Automated Investment Management Services regulated in Singapore?",
+      "answer": "MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Guidelines on Automated Investment Management Services",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Guidelines on Automated Investment Management Services?",
+      "answer": "MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Guidelines on Automated Investment Management Services",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Guidelines on Automated Investment Management Services?",
+      "answer": "MAS AI guidelines require sg/publications/guidelines/guidelines-on-automated-investment-management-services\nDownloaded: 2025-10-03 09:45:50\nDocument Type: MAS Guidelines to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Guidelines on Automated Investment Management Services",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Overview cover?",
+      "answer": "MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Overview",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Overview?",
+      "answer": "MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Overview",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Overview regulated in Singapore?",
+      "answer": "MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Overview",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Overview?",
+      "answer": "MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Overview",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Overview?",
+      "answer": "MAS AI guidelines require Guidelines on Automated Investment Management Services - These guidelines provide best practices for financial institutions to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Overview",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Key Principles cover?",
+      "answer": "MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Principles",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Key Principles?",
+      "answer": "MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Principles",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Key Principles regulated in Singapore?",
+      "answer": "MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Principles",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Key Principles?",
+      "answer": "MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Principles",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Key Principles?",
+      "answer": "MAS AI guidelines require Q: What is the scope of these guidelines?\nA: These guidelines cover guidelines on automated investment management services for all MAS-licensed institutions Q: Are these guidelines mandatory?\nA: While not legally binding, MAS expects compliance with these principles to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Principles",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Best Practices cover?",
+      "answer": "MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Best Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Best Practices?",
+      "answer": "MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Best Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Best Practices regulated in Singapore?",
+      "answer": "MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Best Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Best Practices?",
+      "answer": "MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Best Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Best Practices?",
+      "answer": "MAS AI guidelines require Conduct regular risk assessments\n2 Maintain strong governance\n3 to ensure responsible AI use in financial services.",
+      "source": "mas_real/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Best Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Cybersecurity Requirements cover?",
+      "answer": "MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "section": "Cybersecurity Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Cybersecurity Requirements?",
+      "answer": "MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "section": "Cybersecurity Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Cybersecurity Requirements regulated in Singapore?",
+      "answer": "MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "section": "Cybersecurity Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Cybersecurity Requirements?",
+      "answer": "MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "section": "Cybersecurity Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Cybersecurity Requirements?",
+      "answer": "MAS cybersecurity guidelines mandate sg/publications/guidelines/cybersecurity-requirements\nDownloaded: 2025-10-03 09:45:54\nDocument Type: MAS Guidelines to protect financial institutions from cyber threats.",
+      "source": "mas_real/MAS_Guidelines_Cybersecurity.txt",
+      "section": "Cybersecurity Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Personal Data Protection Act Guidelines cover?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_PDPA.txt",
+      "section": "Personal Data Protection Act Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Personal Data Protection Act Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_PDPA.txt",
+      "section": "Personal Data Protection Act Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Personal Data Protection Act Guidelines regulated in Singapore?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_PDPA.txt",
+      "section": "Personal Data Protection Act Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Personal Data Protection Act Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_PDPA.txt",
+      "section": "Personal Data Protection Act Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Personal Data Protection Act Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/personal-data-protection-act-guidelines\nDownloaded: 2025-10-03 09:45:56\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_PDPA.txt",
+      "section": "Personal Data Protection Act Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Technology Risk Management Guidelines cover?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "section": "Technology Risk Management Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Technology Risk Management Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "section": "Technology Risk Management Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Technology Risk Management Guidelines regulated in Singapore?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "section": "Technology Risk Management Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Technology Risk Management Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "section": "Technology Risk Management Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Technology Risk Management Guidelines?",
+      "answer": "MAS guidelines specify that sg/publications/guidelines/technology-risk-management-guidelines\nDownloaded: 2025-10-03 09:45:52\nDocument Type: MAS Guidelines.",
+      "source": "mas_real/MAS_Guidelines_Technology_Risk.txt",
+      "section": "Technology Risk Management Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Reporting Requirements for Banks cover?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Reporting Requirements for Banks",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Reporting Requirements for Banks?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Reporting Requirements for Banks",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Reporting Requirements for Banks regulated in Singapore?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Reporting Requirements for Banks",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Reporting Requirements for Banks?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Reporting Requirements for Banks",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Reporting Requirements for Banks?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-1015\nDownloaded: 2025-10-03 09:45:47\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Reporting Requirements for Banks",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Key Requirements cover?",
+      "answer": "Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Key Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Key Requirements?",
+      "answer": "Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Key Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Key Requirements regulated in Singapore?",
+      "answer": "Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Key Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Key Requirements?",
+      "answer": "Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Key Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Key Requirements?",
+      "answer": "Singapore financial regulations require Based on the content from MAS website, this notice covers the following key areas:.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Key Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Regulatory Framework cover?",
+      "answer": "Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Regulatory Framework",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Regulatory Framework?",
+      "answer": "Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Regulatory Framework",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Regulatory Framework regulated in Singapore?",
+      "answer": "Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Regulatory Framework",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Regulatory Framework?",
+      "answer": "Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Regulatory Framework",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Regulatory Framework?",
+      "answer": "Singapore financial regulations require - Compliance requirements for licensed financial institutions\n- Prudential standards and risk management requirements\n- Reporting and disclosure obligations.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Regulatory Framework",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Implementation Guidelines cover?",
+      "answer": "Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Implementation Guidelines?",
+      "answer": "Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Implementation Guidelines regulated in Singapore?",
+      "answer": "Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Implementation Guidelines?",
+      "answer": "Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Implementation Guidelines?",
+      "answer": "Singapore financial regulations require - Procedures for compliance implementation\n- Timeline for compliance requirements\n- Documentation and record-keeping requirements.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Guidelines",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Questions and Answers cover?",
+      "answer": "Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Questions and Answers",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Questions and Answers?",
+      "answer": "Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Questions and Answers",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Questions and Answers regulated in Singapore?",
+      "answer": "Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Questions and Answers",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Questions and Answers?",
+      "answer": "Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Questions and Answers",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Questions and Answers?",
+      "answer": "Singapore financial regulations require Q: What is the purpose of this MAS notice?\nA: This notice establishes regulatory requirements for reporting requirements for banks to ensure financial stability and consumer protection.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Questions and Answers",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Implementation Timeline cover?",
+      "answer": "Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Timeline",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Implementation Timeline?",
+      "answer": "Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Timeline",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Implementation Timeline regulated in Singapore?",
+      "answer": "Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Timeline",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Implementation Timeline?",
+      "answer": "Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Timeline",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Implementation Timeline?",
+      "answer": "Singapore financial regulations require **Immediate**: Review and assess current compliance status\n2.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Implementation Timeline",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Contact Information cover?",
+      "answer": "Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Contact Information",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Contact Information?",
+      "answer": "Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Contact Information",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Contact Information regulated in Singapore?",
+      "answer": "Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Contact Information",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Contact Information?",
+      "answer": "Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Contact Information",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Contact Information?",
+      "answer": "Singapore financial regulations require For questions about this notice, contact MAS:\n- Website: https://www.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Contact Information",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Raw Content (for reference) cover?",
+      "answer": "Singapore financial regulations require Government agencies communicate via.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Raw Content (for reference)",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Raw Content (for reference)?",
+      "answer": "Singapore financial regulations require Government agencies communicate via.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Raw Content (for reference)",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Raw Content (for reference) regulated in Singapore?",
+      "answer": "Singapore financial regulations require Government agencies communicate via.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Raw Content (for reference)",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Raw Content (for reference)?",
+      "answer": "Singapore financial regulations require Government agencies communicate via.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Raw Content (for reference)",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Raw Content (for reference)?",
+      "answer": "Singapore financial regulations require Government agencies communicate via.",
+      "source": "mas_real/MAS_Notice_1015_Reporting.txt",
+      "section": "Raw Content (for reference)",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Prevention of Money Laundering and Countering the Financing of Terrorism cover?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "section": "Prevention of Money Laundering and Countering the Financing of Terrorism",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Prevention of Money Laundering and Countering the Financing of Terrorism?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "section": "Prevention of Money Laundering and Countering the Financing of Terrorism",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Prevention of Money Laundering and Countering the Financing of Terrorism regulated in Singapore?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "section": "Prevention of Money Laundering and Countering the Financing of Terrorism",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Prevention of Money Laundering and Countering the Financing of Terrorism?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "section": "Prevention of Money Laundering and Countering the Financing of Terrorism",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Prevention of Money Laundering and Countering the Financing of Terrorism?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-626\nDownloaded: 2025-10-03 09:45:40\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_626_AML_CFT.txt",
+      "section": "Prevention of Money Laundering and Countering the Financing of Terrorism",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Capital Adequacy Requirements cover?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "section": "Capital Adequacy Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Capital Adequacy Requirements?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "section": "Capital Adequacy Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Capital Adequacy Requirements regulated in Singapore?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "section": "Capital Adequacy Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Capital Adequacy Requirements?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "section": "Capital Adequacy Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Capital Adequacy Requirements?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-637\nDownloaded: 2025-10-03 09:45:43\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_637_Capital_Adequacy.txt",
+      "section": "Capital Adequacy Requirements",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Risk Management Practices cover?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "section": "Risk Management Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Risk Management Practices?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "section": "Risk Management Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Risk Management Practices regulated in Singapore?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "section": "Risk Management Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Risk Management Practices?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "section": "Risk Management Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Risk Management Practices?",
+      "answer": "Singapore financial regulations require sg/regulation/notices/notice-832\nDownloaded: 2025-10-03 09:45:45\nDocument Type: MAS Regulatory Notice.",
+      "source": "mas_real/MAS_Notice_832_Risk_Management.txt",
+      "section": "Risk Management Practices",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Document Content cover?",
+      "answer": "MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Document Content",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Document Content?",
+      "answer": "MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Document Content",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Document Content regulated in Singapore?",
+      "answer": "MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Document Content",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Document Content?",
+      "answer": "MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Document Content",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Document Content?",
+      "answer": "MAS AI guidelines require This document contains important information about guidelines on automated investment management services Note: This is a placeholder document to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Document Content",
+      "format": "section_based"
+    },
+    {
+      "question": "What does Key Points cover?",
+      "answer": "MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Points",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the key requirements for Key Points?",
+      "answer": "MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Points",
+      "format": "section_based"
+    },
+    {
+      "question": "How is Key Points regulated in Singapore?",
+      "answer": "MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Points",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the compliance requirements for Key Points?",
+      "answer": "MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Points",
+      "format": "section_based"
+    },
+    {
+      "question": "What are the penalties for non-compliance with Key Points?",
+      "answer": "MAS AI guidelines require - This document outlines regulatory requirements\n- It provides guidance for financial institutions\n- Compliance with these requirements is mandatory to ensure responsible AI use in financial services.",
+      "source": "mas_guidelines/MAS_Guidelines_AI_Advisory.txt",
+      "section": "Key Points",
+      "format": "section_based"
+    }
+  ],
+  "statistics": {
+    "category_breakdown": {
+      "mas_fundamentals": 5,
+      "capital_adequacy": 5,
+      "aml_cft": 5,
+      "digital_banking": 5,
+      "cybersecurity": 5,
+      "sfa": 3,
+      "psa": 3,
+      "insurance": 2,
+      "banking": 2,
+      "compliance": 5,
+      "json_qa": 20,
+      "section_based": 100
+    },
+    "source_breakdown": {
+      "comprehensive": 40,
+      "huggingface_mas/comprehensive_qa.json": 10,
+      "huggingface_mas/training_data.json": 10,
+      "mas_real/MAS_Guidelines_AI_Advisory.txt": 20,
+      "mas_real/MAS_Guidelines_Cybersecurity.txt": 5,
+      "mas_real/MAS_Guidelines_PDPA.txt": 5,
+      "mas_real/MAS_Guidelines_Technology_Risk.txt": 5,
+      "mas_real/MAS_Notice_1015_Reporting.txt": 40,
+      "mas_real/MAS_Notice_626_AML_CFT.txt": 5,
+      "mas_real/MAS_Notice_637_Capital_Adequacy.txt": 5,
+      "mas_real/MAS_Notice_832_Risk_Management.txt": 5,
+      "mas_guidelines/MAS_Guidelines_AI_Advisory.txt": 10
+    },
+    "average_answer_length": 184.84375
+  }
+}
